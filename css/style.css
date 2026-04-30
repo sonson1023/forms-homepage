@@ -2512,6 +2512,14 @@ a.contact-value:hover {
   overflow: hidden;
 }
 
+.org-page .section-title {
+  color: var(--white);
+}
+
+.org-page .section-desc {
+  color: rgba(255, 255, 255, 0.7);
+}
+
 /* CEO Node */
 .org-ceo {
   display: flex;

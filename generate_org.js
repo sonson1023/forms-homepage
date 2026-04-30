@@ -62,7 +62,6 @@ html += '      </div>\r\n';
 // Legend
 html += '\r\n      <div class="org-legend reveal-fade-up">\r\n';
 html += '        <span class="legend-item"><span class="legend-dot dept-sw"></span>SW개발팀</span>\r\n';
-html += '        <span class="legend-item"><span class="legend-dot dept-iot"></span>IoT팀</span>\r\n';
 html += '        <span class="legend-item"><span class="legend-dot dept-hw"></span>HW팀</span>\r\n';
 html += '        <span class="legend-item"><span class="legend-dot dept-qa"></span>SW Q/A 팀</span>\r\n';
 html += '        <span class="legend-item"><span class="legend-dot dept-sales"></span>영업팀</span>\r\n';
@@ -131,24 +130,6 @@ html += '                    </div>\r\n';
 html += '                  </div>\r\n';
 html += '                </div>\r\n';
 
-// IoT dept
-html += '\n                <div class="org-department">\r\n';
-html += '                  <button type="button" class="org-toggle dept-iot" aria-expanded="false" tabindex="0">\r\n';
-html += '                    <span class="org-toggle-indicator"><i class="fa-solid fa-chevron-right"></i></span>\r\n';
-html += '                    <span class="org-toggle-icon"><i class="fa-solid fa-network-wired"></i></span>\r\n';
-html += '                    <span class="org-toggle-text">\r\n';
-html += '                      <span class="org-toggle-title">IoT팀</span>\r\n';
-html += '                      <span class="org-toggle-subtitle">지능형 IoT 솔루션</span>\r\n';
-html += '                    </span>\r\n';
-html += '                  </button>\r\n';
-html += '                  <div class="org-panel">\r\n';
-html += '                    <div class="org-team-list">\r\n';
-html += '                      <div class="org-team-card"><i class="fa-solid fa-microchip"></i><div><strong>Edge AI 반</strong><span>엣지 컴퓨팅, 임베디드 AI</span></div></div>\r\n';
-html += '                      <div class="org-team-card"><i class="fa-solid fa-wifi"></i><div><strong>연결성 개발반</strong><span>프로토콜, 통신 및 네트워크</span></div></div>\r\n';
-html += '                      <div class="org-team-card"><i class="fa-solid fa-industry"></i><div><strong>스마트 팩토리 반</strong><span>공장 자동화 및 모니터링</span></div></div>\r\n';
-html += '                    </div>\r\n';
-html += '                  </div>\r\n';
-html += '                </div>\r\n';
 
 // SW Q/A dept
 html += '\n                <div class="org-department">\r\n';
