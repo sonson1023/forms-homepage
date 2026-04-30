@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Naver crawler
+User-agent: Yeti
+Allow: /
+
+# Google crawler
+User-agent: Googlebot
+Allow: /
+
+Sitemap: https://www.formskorea.com/sitemap.xml

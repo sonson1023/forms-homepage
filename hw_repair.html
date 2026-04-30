@@ -3,8 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>(주)폼즈 | HW 수리 및 품질 검증 — 정밀 하드웨어 진단부터 품질 인증까지</title>
-  <meta name="description" content="(주)폼즈의 HW 수리 및 품질 검증 서비스 — 태블릿 논배터리, 액정 교체, 충전 포트, 메인보드 수리 등 전문적인 하드웨어 수리 및 QA">
+  <title>(주)폼즈 | HW 수리·A/S — PCB 설계 외주·하드웨어 제작 ODM 전문 기업</title>
+  <meta name="description" content="(주)폼즈 HW 수리 및 A/S 서비스 — PCB 설계 외주, 하드웨어 제작, 임베디드 AI(Edge AI) 탑재 제품 수리·유지보수. ODM 전문 기업의 전 수명주기 기술 지원.">
+  <meta name="keywords" content="HW 수리, PCB 수리, 하드웨어 A/S, ODM 기술지원, PCB 설계 외주, 임베디드 AI 개발, Edge AI, formskorea">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.formskorea.com/hw_repair.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="(주)폼즈">
+  <meta property="og:title" content="(주)폼즈 HW 수리·A/S | PCB 설계 외주·하드웨어 ODM">
+  <meta property="og:description" content="PCB 설계 외주, 하드웨어 제작, 임베디드 AI 탑재 제품 A/S — ODM 전문 기업 (주)폼즈의 전 수명주기 기술 지원.">
+  <meta property="og:url" content="https://www.formskorea.com/hw_repair.html">
+  <meta property="og:locale" content="ko_KR">
 
   <!-- SUIT Font -->
   <link rel="stylesheet" as="style" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css" />
@@ -61,14 +70,14 @@
   <section class="sub-hero" id="hw-hero-content">
     <div class="hero-grid-overlay"></div>
     <div class="container sub-hero-inner">
-      <span class="hero-tag"><i class="fa-solid fa-microchip"></i> Hardware &middot; Diagnostics &middot; Quality Assurance</span>
+      <span class="hero-tag"><i class="fa-solid fa-pen-ruler"></i> HW Design &middot; Prototyping &middot; Manufacturing</span>
       <h1 class="sub-hero-title" id="hw-hero-content">
-        정밀한 기술로<br>
-        <span class="hero-line-accent">높이는 품질</span>
+        아이디어부터 제품까지<br>
+        <span class="hero-line-accent">완벽하게 구현합니다</span>
       </h1>
       <p class="sub-hero-desc">
-        태블릿부터 산업용 장비까지 — 전문 진단, 정밀 수리, 신뢰성 검증.<br class="desktop-only">
-        (주)폼즈의 HW 수리 및 품질 검증 서비스로 제품의 성능을 극대화하세요.
+        스키매틱 설계, PCB 레이아웃, 프로토타입 제작부터 양산 관리까지 —<br class="desktop-only">
+        (주)폼즈의 HW 설계 및 제작 서비스로 당신의 제품을 현실로 만드세요.
       </p>
       <div class="sub-hero-ctas">
         <a href="#hw-services" class="btn btn-primary">서비스 보기 <i class="fa-solid fa-arrow-right"></i></a>
@@ -84,12 +93,12 @@
           <span class="terminal-title">forms@hw:~</span>
         </div>
         <div class="terminal-body">
-          <div class="terminal-line"><span class="terminal-prompt">$</span> <span class="terminal-cmd">forms hw --diagnose --all</span></div>
-          <div class="terminal-line"><span class="terminal-output">✓ Component scan complete</span></div>
-          <div class="terminal-line"><span class="terminal-output">✓ LCD panel test passed [Full HD]</span></div>
-          <div class="terminal-line"><span class="terminal-output">✓ Battery health: 97% [Optimal]</span></div>
-          <div class="terminal-line"><span class="terminal-output">✓ Charging port impedance: OK</span></div>
-          <div class="terminal-line"><span class="terminal-output">✓ Quality cert: ISO 9001 verified</span></div>
+          <div class="terminal-line"><span class="terminal-prompt">$</span> <span class="terminal-cmd">forms hw --design --project=custom-device</span></div>
+          <div class="terminal-line"><span class="terminal-output">✓ Schematic design complete [KiCad 8.0]</span></div>
+          <div class="terminal-line"><span class="terminal-output">✓ PCB layout: 4-layer, HDI routing</span></div>
+          <div class="terminal-line"><span class="terminal-output">✓ DRC check passed — 0 errors</span></div>
+          <div class="terminal-line"><span class="terminal-output">✓ Gerber exported → Fab-ready</span></div>
+          <div class="terminal-line"><span class="terminal-output">✓ BOM cost optimized: $12.40/unit @1K</span></div>
           <div class="terminal-line"><span class="terminal-prompt">$</span> <span class="terminal-cursor">▊</span></div>
         </div>
       </div>
@@ -104,353 +113,114 @@
         <span class="breadcrumb-sep"><i class="fa-solid fa-chevron-right"></i></span>
         <a href="index.html#services">사업분야</a>
         <span class="breadcrumb-sep"><i class="fa-solid fa-chevron-right"></i></span>
-        <span class="breadcrumb-current">HW 수리 및 품질 검증</span>
+        <span class="breadcrumb-current">HW 설계 및 제작</span>
       </nav>
     </div>
   </div>
 
-  <!-- ==================== SERVICE CATEGORIES (Bento Grid) ==================== -->
+  <!-- ==================== HW DESIGN SERVICES (Bento Grid) ==================== -->
   <section id="hw-services" class="hw-services section">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
-        <span class="section-tag">&lt;Service Categories /&gt;</span>
-        <h2 class="section-title">수리 서비스 분야</h2>
-        <p class="section-desc">모바일 기기부터 산업용 장비까지 — 전문 분야별 정밀 수리 솔루션</p>
+        <span class="section-tag">&lt;HW Design Services /&gt;</span>
+        <h2 class="section-title">하드웨어 설계 및 제작</h2>
+        <p class="section-desc">스키매틱 설계부터 양산까지 — 아이디어를 완제품으로 만듭니다</p>
       </div>
 
       <div class="bento-grid">
-        <!-- Tablet Repair (Large card) -->
+        <!-- Schematic Design (Large card) -->
         <div class="bento-card bento-large" data-aos="fade-up" data-aos-delay="100">
           <div class="bento-card-bg"></div>
           <div class="bento-icon bento-warm">
-            <i class="fa-solid fa-tablet-screen-button"></i>
+            <i class="fa-solid fa-pen-ruler"></i>
           </div>
-          <span class="tech-tag tech-tag-warm">TABLET</span>
-          <h3>태블릿 전문 수리</h3>
-          <p>iPad, 갤럭시 탭 등 주요 태블릿 기기의 모든 수리 항목을 커버합니다. 원본 부품급 품질의 교체부품과 정밀 공정을 보장합니다.</p>
+          <span class="tech-tag tech-tag-warm">SCHEMATIC</span>
+          <h3>스키매틱 및 PCB 설계</h3>
+          <p>KiCad, Altium 등 전문 EDA 도구로 스키매틱을 설계하고, HDI 라우팅이 가능한 다층 PCB 레이아웃을 완성합니다.</p>
           <ul class="bento-features">
-            <li><i class="fa-solid fa-check"></i> 액정 디스플레이 교체 (OLED/LCD)</li>
-            <li><i class="fa-solid fa-check"></i> 논배터리(메인보드) 수리</li>
-            <li><i class="fa-solid fa-check"></i> 배터리 용량 진단 및 교체</li>
-            <li><i class="fa-solid fa-check"></i> 터치 스크린 패널 수리</li>
-            <li><i class="fa-solid fa-check"></i> 후면 커버 분해/재조립</li>
+            <li><i class="fa-solid fa-check"></i> 전원 회로 및 신호 무결성 설계</li>
+            <li><i class="fa-solid fa-check"></i> 2~16레이어 PCB 레이아웃</li>
+            <li><i class="fa-solid fa-check"></i> HDI / BGA / MI 라우팅</li>
+            <li><i class="fa-solid fa-check"></i> DRC/LVS 자동 검증</li>
+            <li><i class="fa-solid fa-check"></i> Gerber/ODB++ 파일 출력</li>
           </ul>
         </div>
 
-        <!-- LCD Replacement -->
+        <!-- Prototyping -->
         <div class="bento-card card-hover-lift--glow" data-aos="fade-up" data-aos-delay="150">
           <div class="bento-icon bento-cyan">
-            <i class="fa-solid fa-display"></i>
+            <i class="fa-solid fa-flask"></i>
           </div>
-          <span class="tech-tag tech-tag-cyan">DISPLAY</span>
-          <h3>액정 교체 서비스</h3>
-          <p>깨진 액정, 터치 불량, 색감 이상 등 디스플레이 관련 모든 문제를 해결합니다.</p>
+          <span class="tech-tag tech-tag-cyan">PROTOTYPE</span>
+          <h3>프로토타입 제작</h3>
+          <p>설계를 실제 회로로 구현하고, 기능 검증부터 성능 테스트까지 신속하게 진행합니다.</p>
           <ul class="bento-features">
-            <li><i class="fa-solid fa-check"></i> 오리지널급 패널 공급</li>
-            <li><i class="fa-solid fa-check"></i> 캘리브레이션 포함</li>
-            <li><i class="fa-solid fa-check"></i> 30분~2시간 급행 수리</li>
+            <li><i class="fa-solid fa-check"></i> 샘플 기판 제작 (3~5일)</li>
+            <li><i class="fa-solid fa-check"></i> 핸드 솔더링 및 조립</li>
+            <li><i class="fa-solid fa-check"></i> 동작 검증 및 디버깅</li>
           </ul>
         </div>
 
-        <!-- Charging Port -->
+        <!-- Enclosure Design -->
         <div class="bento-card card-hover-lift--glow" data-aos="fade-up" data-aos-delay="200">
           <div class="bento-icon bento-cyan">
-            <i class="fa-solid fa-plug-circle-bolt"></i>
+            <i class="fa-solid fa-cube"></i>
           </div>
-          <span class="tech-tag tech-tag-cyan">CONNECT</span>
-          <h3>충전 포트 교체</h3>
-          <p>충전 불량, 연결 불안정, 포트 마모 등의 문제를 정밀 수리합니다.</p>
+          <span class="tech-tag tech-tag-cyan">ENCLOSURE</span>
+          <h3>인클로저 설계</h3>
+          <p>3D CAD로 외관을 설계하고, 3D 프린팅 또는 금형 제작으로 실제 케이스를 완성합니다.</p>
           <ul class="bento-features">
-            <li><i class="fa-solid fa-check"></i> USB-C / Lightning / 마이크로서IAL</li>
-            <li><i class="fa-solid fa-check"></i> 단자 재납땜 &amp; 교체</li>
-            <li><i class="fa-solid fa-check"></i> 무선 충전 코일 수리</li>
+            <li><i class="fa-solid fa-check"></i> Fusion 360 / SolidWorks</li>
+            <li><i class="fa-solid fa-check"></i> 3D 프린팅 시제품</li>
+            <li><i class="fa-solid fa-check"></i> 금형 설계 및 제작</li>
           </ul>
         </div>
 
-        <!-- Motherboard -->
+        <!-- Component Selection -->
         <div class="bento-card card-hover-lift--glow" data-aos="fade-up" data-aos-delay="250">
           <div class="bento-icon bento-warm">
-            <i class="fa-solid fa-server"></i>
+            <i class="fa-solid fa-microchip"></i>
           </div>
-          <span class="tech-tag tech-tag-warm">BOARD</span>
-          <h3>메인보드 수리</h3>
-          <p>소자 교체, 리플로우, 배선 복구 등 기판 수준의 정밀 수리를 수행합니다.</p>
+          <span class="tech-tag tech-tag-warm">BOM</span>
+          <h3>부품 선정 및 BOM 최적화</h3>
+          <p>성능, 가격, 수급 안정성을 고려하여 최적의 부품군을 선정하고 BOM을 관리합니다.</p>
           <ul class="bento-features">
-            <li><i class="fa-solid fa-check"></i> IC 칩 레벨 수리</li>
-            <li><i class="fa-solid fa-check"></i> 리플로우 &amp; 리볼링</li>
-            <li><i class="fa-solid fa-check"></i> 배선 복구 (레이어 개조)</li>
+            <li><i class="fa-solid fa-check"></i> MCU/SoC 플랫폼 선정</li>
+            <li><i class="fa-solid fa-check"></i> 수급 리스크 분석</li>
+            <li><i class="fa-solid fa-check"></i> Cost-down 설계</li>
           </ul>
         </div>
 
-        <!-- Battery -->
+        <!-- Certification -->
         <div class="bento-card card-hover-lift--glow" data-aos="fade-up" data-aos-delay="300">
           <div class="bento-icon bento-purple">
-            <i class="fa-solid fa-battery-three-quarters"></i>
+            <i class="fa-solid fa-certificate"></i>
           </div>
-          <span class="tech-tag tech-tag-purple">POWER</span>
-          <h3>배터리 교체</h3>
-          <p>배터리 효율 저하, 과열, 부풀어오름 등 배터리 관련 문제를 해결합니다.</p>
+          <span class="tech-tag tech-tag-purple">CERTIFICATION</span>
+          <h3>규격 인증 지원</h3>
+          <p>전기안전, 전자파 적합성 등 제품 출시에 필요한 각종 규격을 준비하고 대응합니다.</p>
           <ul class="bento-features">
-            <li><i class="fa-solid fa-check"></i> 순정급 배터리 공급</li>
-            <li><i class="fa-solid fa-check"></i> 효율 진단 (SOH 측정)</li>
-            <li><i class="fa-solid fa-check"></i> kalibr레이션 완료</li>
+            <li><i class="fa-solid fa-check"></i> KC / FCC / CE 인증</li>
+            <li><i class="fa-solid fa-check"></i> EMC/EMI 사전 테스트</li>
+            <li><i class="fa-solid fa-check"></i> RoHS/REACH 준수</li>
           </ul>
         </div>
 
-        <!-- Camera -->
+        <!-- Mass Production -->
         <div class="bento-card card-hover-lift--glow" data-aos="fade-up" data-aos-delay="100">
           <div class="bento-icon bento-cyan">
-            <i class="fa-solid fa-camera"></i>
+            <i class="fa-solid fa-industry"></i>
           </div>
-          <span class="tech-tag tech-tag-cyan">CAMERA</span>
-          <h3>카메라 수리</h3>
-          <p>카메라 유리 파손, 포커싱 불량, 화질 저하를 전문 수리합니다.</p>
+          <span class="tech-tag tech-tag-cyan">MASS PROD</span>
+          <h3>양산 관리</h3>
+          <p>소량부터 대량까지 — 납품 업체 선정, 수검,出荷 전 QA를 총괄합니다.</p>
           <ul class="bento-features">
-            <li><i class="fa-solid fa-check"></i> 카메라 모듈 교체</li>
-            <li><i class="fa-solid fa-check"></i> 유리 커버 재장착</li>
-            <li><i class="fa-solid fa-check"></i> OIS 진동복원</li>
+            <li><i class="fa-solid fa-check"></i> 공법 검토 및 피드백</li>
+            <li><i class="fa-solid fa-check"></i> 입고 검사 (IQC)</li>
+            <li><i class="fa-solid fa-check"></i> 출고 전 최종 검증</li>
           </ul>
         </div>
 
-        <!-- Water Damage (Large) -->
-        <div class="bento-card bento-large" data-aos="fade-up" data-aos-delay="150">
-          <div class="bento-card-bg"></div>
-          <div class="bento-icon bento-purple">
-            <i class="fa-solid fa-droplet"></i>
-          </div>
-          <span class="tech-tag tech-tag-purple">RECOVERY</span>
-          <h3>물손상 복구 전문</h3>
-          <p>물에 젖은 기기의 긴급 복구를 전문으로 합니다. 부식 제거, 세정, 부품 교체까지 전 공정을 관리합니다.</p>
-          <ul class="bento-features">
-            <li><i class="fa-solid fa-check"></i> 초음파 세정 &amp; 부식 제거</li>
-            <li><i class="fa-solid fa-check"></i> 기판 레벨 정밀 진단</li>
-            <li><i class="fa-solid fa-check"></i> 긴급 데이터 복구 대응</li>
-            <li><i class="fa-solid fa-check"></i> 방수 처리 재적용</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== HARDWARE MONITORING DASHBOARD ==================== -->
-  <section class="hw-dashboard section">
-    <div class="services-grid-bg"></div>
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-tag">&lt;Repair Tracking Dashboard /&gt;</span>
-        <h2 class="section-title">실시간 수리 모니터링 대시보드</h2>
-        <p class="section-desc">(주)폼즈의 품질관리팀은 하드웨어 수리팀에서 완료한 모든 수리 건을 실시간으로 모니터링하고 관리합니다.<br>일별 수리 이력을 기록하고, 3단계 QA 테스트 진행 상황을 추적하여 고객과 투명하게 소통합니다.</p>
-      </div>
-
-      <!-- Dashboard Mock -->
-      <div class="dashboard-mock widget-card" data-aos="fade-up" data-aos-delay="100">
-        <!-- Dashboard Header -->
-        <div class="dashboard-header">
-          <div class="dashboard-logo">
-            <span class="logo-text">FORMS<span class="dot">.</span></span>
-            <span class="tech-tag tech-tag-cyan">QC Monitoring</span>
-          </div>
-          <div class="dashboard-user-bar">
-            <span><i class="fa-solid fa-building"></i> (주)샘플기업</span>
-            <span><i class="fa-regular fa-calendar"></i> 2026.04.28 화요일</span>
-            <span class="dashboard-status-dot"><i class="fa-solid fa-circle"></i> 실시간 연동 중</span>
-          </div>
-        </div>
-
-        <!-- Stats Row -->
-        <div class="dashboard-stats">
-          <div class="dash-stat-card">
-            <div class="dash-stat-icon dash-stat-cyan"><i class="fa-solid fa-clipboard-list"></i></div>
-            <div>
-              <span class="dash-stat-value" id="stat-total">24</span>
-              <span class="dash-stat-label">총 접수 건수</span>
-            </div>
-          </div>
-          <div class="dash-stat-card">
-            <div class="dash-stat-icon dash-stat-warm"><i class="fa-solid fa-spinner"></i></div>
-            <div>
-              <span class="dash-stat-value" id="stat-progress">7</span>
-              <span class="dash-stat-label">진행 중</span>
-            </div>
-          </div>
-          <div class="dash-stat-card">
-            <div class="dash-stat-icon dash-stat-purple"><i class="fa-solid fa-magnifying-glass"></i></div>
-            <div>
-              <span class="dash-stat-value" id="stat-diagnosis">3</span>
-              <span class="dash-stat-label">진단 대기</span>
-            </div>
-          </div>
-          <div class="dash-stat-card">
-            <div class="dash-stat-icon dash-stat-success"><i class="fa-solid fa-circle-check"></i></div>
-            <div>
-              <span class="dash-stat-value" id="stat-completed">14</span>
-              <span class="dash-stat-label">수리 완료</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Main Dashboard Grid -->
-        <div class="dashboard-grid">
-          <!-- Repair Status Chart (Bar Chart Mock) -->
-          <div class="dash-chart-card">
-            <div class="dash-chart-header">
-              <h4><i class="fa-solid fa-chart-column"></i> 주간 수리 현황</h4>
-              <span class="tech-tag tech-tag-cyan" style="font-size: 0.65rem;">WEEKLY</span>
-            </div>
-            <div class="bar-chart">
-              <div class="chart-bars">
-                <div class="chart-bar-group">
-                  <div class="chart-bar bar-incoming" style="--bar-height: 40%;"></div>
-                  <span class="chart-label">월</span>
-                </div>
-                <div class="chart-bar-group">
-                  <div class="chart-bar bar-progress" style="--bar-height: 30%;"></div>
-                  <span class="chart-label">화</span>
-                </div>
-                <div class="chart-bar-group">
-                  <div class="chart-bar bar-incoming" style="--bar-height: 65%;"></div>
-                  <span class="chart-label">수</span>
-                </div>
-                <div class="chart-bar-group">
-                  <div class="chart-bar bar-progress" style="--bar-height: 20%;"></div>
-                  <span class="chart-label">목</span>
-                </div>
-                <div class="chart-bar-group">
-                  <div class="chart-bar bar-incoming" style="--bar-height: 50%;"></div>
-                  <span class="chart-label">금</span>
-                </div>
-              </div>
-              <div class="chart-legend">
-                <span><span class="legend-dot legend-cyan"></span> 신규 접수</span>
-                <span><span class="legend-dot legend-warm"></span> 진행 중</span>
-                <span><span class="legend-dot legend-success"></span> 완료</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Recent Activity Feed -->
-          <div class="dash-feed-card">
-            <div class="dash-chart-header">
-              <h4><i class="fa-solid fa-clock-rotate-left"></i> 최근 활동</h4>
-              <span style="font-size: var(--caption-font-size); color: var(--accent-cyan); cursor: pointer;">전체 보기 <i class="fa-solid fa-arrow-right"></i></span>
-            </div>
-            <div class="activity-feed">
-              <div class="feed-item feed-completed">
-                <span class="feed-time">14:32</span>
-                <div class="feed-dot feed-dot-success"></div>
-                <div>
-                  <span class="feed-title">iPad Pro 12.9" 액정 교체</span>
-                  <span class="feed-status">QA 테스트 완료 → 출고 준비</span>
-                </div>
-              </div>
-              <div class="feed-item feed-progress">
-                <span class="feed-time">13:15</span>
-                <div class="feed-dot feed-dot-warm"></div>
-                <div>
-                  <span class="feed-title">갤럭시 탭 S9 배터리 교체</span>
-                  <span class="feed-status">수리 진행 중 — 65% 완료</span>
-                </div>
-              </div>
-              <div class="feed-item feed-incoming">
-                <span class="feed-time">11:40</span>
-                <div class="feed-dot feed-dot-cyan"></div>
-                <div>
-                  <span class="feed-title">산업용 태블릿 5대 일괄 진단</span>
-                  <span class="feed-status">접수 확인 → 진단 예약됨</span>
-                </div>
-              </div>
-              <div class="feed-item feed-completed">
-                <span class="feed-time">10:22</span>
-                <div class="feed-dot feed-dot-success"></div>
-                <div>
-                  <span class="feed-title">Surface Pro 8 충전 포트 교체</span>
-                  <span class="feed-status">기능 테스트 통과 → 고객 반납</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Daily Record Table -->
-        <div class="dash-table-card" data-aos="fade-up" data-aos-delay="150">
-          <div class="dash-chart-header">
-            <h4><i class="fa-solid fa-table"></i> 일자별 수리 기록 — 고객과 공유</h4>
-            <span style="font-size: var(--caption-font-size); color: rgba(255,255,255,0.5);"><i class="fa-solid fa-share-nodes"></i> 자동 푸시 알림 연동</span>
-          </div>
-          <div class="dash-table-wrapper">
-            <table class="dash-table">
-              <thead>
-                <tr>
-                  <th>접수 번호</th>
-                  <th>날짜</th>
-                  <th>기종</th>
-                  <th>수리 항목</th>
-                  <th>상태</th>
-                  <th>기술자</th>
-                  <th>예상 완료</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="dash-ticket">#HW-260428-01</td>
-                  <td>04/28</td>
-                  <td>iPad Pro 12.9"</td>
-                  <td>액정 교체 (OLED)</td>
-                  <td><span class="dash-status dash-completed">완료</span></td>
-                  <td>김OO</td>
-                  <td>04/28 14:30</td>
-                </tr>
-                <tr>
-                  <td class="dash-ticket">#HW-260428-02</td>
-                  <td>04/28</td>
-                  <td>갤럭시 탭 S9 FE</td>
-                  <td>배터리 교체</td>
-                  <td><span class="dash-status dash-progress">진행 중</span></td>
-                  <td>박OO</td>
-                  <td>04/28 16:00</td>
-                </tr>
-                <tr>
-                  <td class="dash-ticket">#HW-260427-03</td>
-                  <td>04/27</td>
-                  <td>Surface Pro 8</td>
-                  <td>충전 포트 교체</td>
-                  <td><span class="dash-status dash-completed">완료</span></td>
-                  <td>김OO</td>
-                  <td>04/27 15:45</td>
-                </tr>
-                <tr>
-                  <td class="dash-ticket">#HW-260428-04</td>
-                  <td>04/28</td>
-                  <td>산업용 태블릿 × 5</td>
-                  <td>대량 진단 + QA</td>
-                  <td><span class="dash-status dash-diagnosis">진단 대기</span></td>
-                  <td>이OO</td>
-                  <td>04/29 10:00</td>
-                </tr>
-             </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <!-- Dashboard Value Props -->
-      <div class="dashboard-features" data-aos="fade-up" data-aos-delay="100">
-        <div class="dash-feature-item widget-card card-hover-lift--glow">
-          <i class="fa-solid fa-chart-line"></i>
-          <h4>실시간 상태 공유</h4>
-          <p>수리 진행 상황을 대시보드를 통해 실시간으로 확인 가능하며, 완료 시 자동 푸시 알림을 드립니다.</p>
-        </div>
-        <div class="dash-feature-item widget-card card-hover-lift--glow">
-          <i class="fa-solid fa-file-lines"></i>
-          <h4>일자별 기록 보관</h4>
-          <p>모든 수리 이력은 일자별로 자동 기록되어 조회가 가능하며, 필요 시 PDF 리포트로 제공받을 수 있습니다.</p>
-        </div>
-        <div class="dash-feature-item widget-card card-hover-lift--glow">
-          <i class="fa-solid fa-users-viewfinder"></i>
-          <h4>고객 소통 채널</h4>
-          <p>대시보드 내 직접 문의 기능으로 기술자와 실시간으로 소통하고, 수리 우선순위를 조정할 수 있습니다.</p>
-        </div>
       </div>
     </div>
   </section>
@@ -642,13 +412,13 @@
         </div>
         <div class="footer-nav">
           <div class="footer-nav-col">
-            <h4>&lt;Services /&gt;</h4>
+            <h4>SERVICES</h4>
             <a href="index.html#services">AI 소프트웨어 개발</a>
             <a href="hw_repair.html">HW 수리 및 검증</a>
             <a href="index.html#services">AI IoT 제어</a>
           </div>
           <div class="footer-nav-col">
-            <h4>&lt;Company /&gt;</h4>
+            <h4>COMPANY</h4>
             <a href="index.html#about">회사소개</a>
             <a href="index.html#contact">연락처</a>
           </div>

@@ -868,7 +868,7 @@ select:focus-visible,
 }
 
 .about-text p {
-  color: var(--neutral-500);
+  color: var(--neutral-700);
   font-size: var(--body-lg-font-size);
   margin-bottom: var(--spacing-md);
   line-height: 1.8;
@@ -1019,7 +1019,7 @@ select:focus-visible,
 
 .department-card p {
   font-size: var(--body-sm-font-size);
-  color: var(--neutral-500);
+  color: rgba(255, 255, 255, 0.78);
   line-height: var(--leading-relaxed);
   margin: 0;
 }
@@ -1146,7 +1146,7 @@ select:focus-visible,
 .service-tech-tag {
   font-family: var(--font-mono);
   font-size: var(--caption-font-size);
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.55);
   letter-spacing: 0.08em;
 }
 
@@ -1185,7 +1185,7 @@ select:focus-visible,
 }
 
 .service-card p {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.85);
   font-size: var(--body-font-size);
   line-height: 1.75;
   margin-bottom: var(--spacing-lg);
@@ -1207,7 +1207,7 @@ select:focus-visible,
   gap: var(--spacing-sm);
   font-family: var(--font-mono);
   font-size: var(--body-sm-font-size);
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .service-features li i {
@@ -1272,7 +1272,7 @@ select:focus-visible,
 }
 
 .contact-info > p {
-  color: var(--neutral-500);
+  color: var(--neutral-700);
   font-size: var(--body-lg-font-size);
   margin-bottom: var(--spacing-xxl);
 }
@@ -1307,8 +1307,8 @@ select:focus-visible,
   display: block;
   font-family: var(--font-mono);
   font-size: var(--caption-font-size);
-  font-weight: 500;
-  color: var(--neutral-400);
+  font-weight: 600;
+  color: var(--neutral-700);
   letter-spacing: 0.1em;
   margin-bottom: 2px;
 }
@@ -1453,8 +1453,33 @@ select:focus-visible,
 
 .footer-brand > p {
   font-size: var(--body-sm-font-size);
-  color: rgba(255, 255, 255, 0.4);
-  margin-bottom: var(--spacing-lg);
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: var(--spacing-md);
+}
+
+.footer-address {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-address span {
+  font-size: var(--caption-font-size);
+  color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-address a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footer-address a:hover {
+  color: var(--accent-cyan);
 }
 
 /* Footer Nav */
@@ -1475,7 +1500,7 @@ select:focus-visible,
 .footer-nav-col a {
   display: block;
   font-size: var(--body-sm-font-size);
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.72);
   padding: var(--spacing-sm) 0;
   transition: color var(--transition-fast);
 }
@@ -1496,7 +1521,7 @@ select:focus-visible,
 .footer-copy {
   font-family: var(--font-mono);
   font-size: var(--caption-font-size);
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.55);
   letter-spacing: 0.03em;
 }
 
@@ -1757,6 +1782,17 @@ select:focus-visible,
 .contact-value {
   color: var(--primary-900);
   font-weight: 600;
+}
+
+.contact-value a.contact-value,
+a.contact-value {
+  color: var(--primary-900);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a.contact-value:hover {
+  color: var(--accent-cyan);
 }
 
 /* Service card descriptions on dark backgrounds — lighten for readability */
@@ -3380,5 +3416,249 @@ select:focus-visible,
 
   .org-node {
     padding: var(--spacing-xl) var(--spacing-lg);
+  }
+}
+
+/* ==========================================
+   PROJECT CARD (Hero decoration — ODM focus)
+   ========================================== */
+
+.project-card {
+  background: rgba(6, 14, 26, 0.85);
+  border: 1px solid rgba(0, 201, 177, 0.18);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl), var(--shadow-cyan-glow);
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  font-family: var(--font-mono);
+}
+
+.project-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.project-id {
+  font-size: var(--caption-font-size);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.project-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+}
+
+.badge-active {
+  color: var(--accent-cyan);
+  background: rgba(0, 201, 177, 0.1);
+}
+
+.badge-cyan {
+  color: var(--accent-blue);
+  background: rgba(0, 153, 255, 0.1);
+}
+
+/* Phase list (Slide 1) */
+.project-phases {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.phase-row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--body-sm-font-size);
+}
+
+.phase-row span {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.phase-done i { color: var(--accent-cyan); }
+.phase-done span { color: rgba(255, 255, 255, 0.9); }
+
+.phase-progress i { color: var(--accent-warm); }
+.phase-progress span { color: var(--accent-warm-light); }
+
+.phase-pending i { color: rgba(255, 255, 255, 0.2); }
+
+/* Progress bar */
+.project-progress-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.progress-label-text {
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.1em;
+  flex-shrink: 0;
+}
+
+.progress-track {
+  flex: 1;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-cyan), var(--accent-warm));
+  border-radius: 2px;
+}
+
+.progress-pct {
+  font-size: 0.7rem;
+  color: var(--accent-cyan);
+  flex-shrink: 0;
+}
+
+/* Spec grid (Slide 2) */
+.spec-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.spec-row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.spec-key {
+  font-size: var(--caption-font-size);
+  font-weight: 600;
+  color: var(--accent-cyan);
+  letter-spacing: 0.08em;
+  min-width: 52px;
+  text-transform: uppercase;
+}
+
+.spec-val {
+  font-size: var(--body-sm-font-size);
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* A/S monitor (Slide 3) */
+.as-monitor-stats {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.as-monitor-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.as-monitor-item i {
+  color: var(--accent-cyan);
+  width: 18px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.as-monitor-label {
+  font-size: var(--body-sm-font-size);
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.as-monitor-status {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  font-size: var(--caption-font-size);
+  color: var(--accent-cyan);
+}
+
+/* ==========================================
+   ODM PROCESS SECTION
+   ========================================== */
+
+.odm-process {
+  background: var(--neutral-50);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Step text override — global .step-content uses white (for hw-process dark bg).
+   ODM process is light, so force dark text. */
+.odm-process .step-content h3 {
+  color: var(--primary-900);
+}
+
+.odm-process .step-content p {
+  color: var(--neutral-700);
+}
+
+/* Section title on light background */
+.odm-process .section-title {
+  color: var(--primary-900);
+}
+
+.odm-process .section-desc {
+  color: var(--neutral-700);
+}
+
+.odm-process-timeline {
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--spacing-lg);
+}
+
+/* Extend the connecting line full width for 6 steps */
+.odm-process-timeline::before {
+  left: 30px;
+  right: 30px;
+}
+
+/* Nav link for process section */
+.nav-list a[href="#process"],
+.nav-overlay-link[href="#process"] {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .odm-process-timeline {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .odm-process-timeline {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xl);
+  }
+
+  .odm-process-timeline::before {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .odm-process-timeline {
+    grid-template-columns: 1fr;
   }
 }

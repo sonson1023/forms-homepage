@@ -371,13 +371,13 @@ html += '          <p>(주)폼즈 \u2014 기술로 가치를 만듭니다</p>\r\
 html += '        </div>\r\n';
 html += '        <div class="footer-nav">\r\n';
 html += '          <div class="footer-nav-col">\r\n';
-html += '            <h4>&lt;Services /&gt;</h4>\r\n';
+html += '            <h4>SERVICES</h4>\r\n';
 html += '            <a href="index.html#services">AI 소프트웨어 개발</a>\r\n';
 html += '            <a href="hw_repair.html">HW 수리 및 검증</a>\r\n';
 html += '            <a href="index.html#services">AI IoT 제어</a>\r\n';
 html += '          </div>\r\n';
 html += '          <div class="footer-nav-col">\r\n';
-html += '            <h4>&lt;Company /&gt;</h4>\r\n';
+html += '            <h4>COMPANY</h4>\r\n';
 html += '            <a href="index.html#about">회사소개</a>\r\n';
 html += '            <a href="organization.html">조직도</a>\r\n';
 html += '            <a href="index.html#contact">연락처</a>\r\n';
