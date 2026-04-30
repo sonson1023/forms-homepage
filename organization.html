@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>(주)폼즈 | 조직도</title>
+  <meta name="description" content="(주)폼즈 — 조직 구조">
+  <link rel="stylesheet" as="style" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#org-content" class="skip-link">본문으로 이동</a>
+
+  <!-- Header -->
+  <header id="header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html#hero" class="logo" aria-label="FORMS 홈으로 이동">
+        <span class="logo-text">FORMS<span class="dot">.</span></span>
+      </a>
+      <nav role="navigation" aria-label="주요 내비게이션">
+        <ul class="nav-list">
+          <li><a href="index.html#about">회사소개</a></li>
+          <li><a href="organization.html" aria-current="page">조직도</a></li>
+          <li><a href="index.html#services">사업분야</a></li>
+          <li><a href="index.html#contact">연락처</a></li>
+        </ul>
+      </nav>
+      <button id="menu-toggle" class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="nav-overlay">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div id="nav-overlay" class="nav-overlay" role="dialog" aria-modal="true" aria-label="모바일 메뉴">
+    <div class="nav-overlay-inner">
+      <a href="index.html#about">회사소개</a>
+      <a href="organization.html">조직도</a>
+      <a href="index.html#services">사업분야</a>
+      <a href="index.html#contact">연락처</a>
+    </div>
+  </div>
+
+  <!-- Org Section -->
+  <section id="org-content" class="org-page section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">&lt;Organization /&gt;</span>
+        <h1 class="section-title">조직도</h1>
+        <p class="section-desc">(주)폼즈의 조직 구조</p>
+      </div>
+
+      <!-- CEO -->
+      <div class="org-ceo">
+        <div class="org-node org-node-ceo widget-card" data-aos="fade-down">
+          <i class="fa-solid fa-user-tie"></i>
+          <h2>대표이사</h2>
+          <p>전사 경영 및 전략</p>
+        </div>
+      </div>
+
+      <!-- Team Grid -->
+      <div class="org-grid">
+
+        <div class="org-card widget-card dept-sw" data-aos="fade-up" data-aos-delay="100">
+          <div class="org-card-icon"><i class="fa-solid fa-brain"></i></div>
+          <h3>SW개발팀</h3>
+          <p>AI/ML 알고리즘, NLP·CV 솔루션, 플랫폼 개발</p>
+        </div>
+
+        <div class="org-card widget-card dept-iot" data-aos="fade-up" data-aos-delay="150">
+          <div class="org-card-icon"><i class="fa-solid fa-network-wired"></i></div>
+          <h3>IoT팀</h3>
+          <p>Edge AI, IoT 플랫폼, 스마트 팩토리 솔루션</p>
+        </div>
+
+        <div class="org-card widget-card dept-hw" data-aos="fade-up" data-aos-delay="200">
+          <div class="org-card-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+          <h3>HW수리팀</h3>
+          <p>모바일·태블릿·산업 장비 정밀 진단 및 수리</p>
+        </div>
+
+        <div class="org-card widget-card dept-quality" data-aos="fade-up" data-aos-delay="100">
+          <div class="org-card-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+          <h3>품질관리팀</h3>
+          <p>출고 전 검증, 3단계 QA 테스트, 공정 개선</p>
+        </div>
+
+        <div class="org-card widget-card dept-sales" data-aos="fade-up" data-aos-delay="150">
+          <div class="org-card-icon"><i class="fa-solid fa-handshake"></i></div>
+          <h3>영업팀</h3>
+          <p>고객사 확보, 계약 및 B2B 파트너십</p>
+        </div>
+
+        <div class="org-card widget-card dept-cs" data-aos="fade-up" data-aos-delay="200">
+          <div class="org-card-icon"><i class="fa-solid fa-headset"></i></div>
+          <h3>CS팀</h3>
+          <p>고객 문의 대응 및 기술 지원</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-grid-bg" aria-hidden="true"></div>
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="logo-text">FORMS<span class="dot">.</span></span>
+          <p>(주)폼즈 — 기술로 가치를 만듭니다</p>
+        </div>
+        <div class="footer-nav">
+          <div class="footer-nav-col">
+            <h4>&lt;Services /&gt;</h4>
+            <a href="index.html#services">AI 소프트웨어 개발</a>
+            <a href="hw_repair.html">HW 수리 및 검증</a>
+            <a href="index.html#services">AI IoT 제어</a>
+          </div>
+          <div class="footer-nav-col">
+            <h4>&lt;Company /&gt;</h4>
+            <a href="index.html#about">회사소개</a>
+            <a href="organization.html">조직도</a>
+            <a href="index.html#contact">연락처</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          <p>&copy; <span id="current-year"></span> (주)폼즈. All rights reserved.</p>
+        </div>
+        <a href="#org-content" class="btn-back-top"><i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

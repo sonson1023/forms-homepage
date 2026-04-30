@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>(주)폼즈 | AI Software · HW Quality · IoT Control</title>
+  <meta name="description" content="(주)폼즈 - AI 소프트웨어 개발, HW 수리 및 품질 검증, AI 기반 IoT 제어 전문가">
+
+  <!-- SUIT Font -->
+  <link rel="stylesheet" as="style" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css" />
+
+  <!-- JetBrains Mono (for tech labels/tags) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Skip to content link (accessibility) -->
+  <a href="#hero" class="skip-link">본문으로 이동</a>
+
+  <!-- ==================== HEADER / NAV ==================== -->
+  <header id="header" role="banner">
+    <div class="container header-inner">
+      <a href="#hero" class="logo" aria-label="FORMS 홈으로 이동">
+        <span class="logo-text">FORMS<span class="dot">.</span></span>
+      </a>
+      <nav id="nav" role="navigation" aria-label="주요 내비게이션">
+        <ul class="nav-list">
+          <li><a href="#about">회사소개</a></li>
+          <li><a href="organization.html">조직도</a></li>
+          <li><a href="#services">사업분야</a></li>
+          <li><a href="#contact">연락처</a></li>
+        </ul>
+      </nav>
+      <button id="menu-toggle" class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="nav-overlay">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <div id="nav-overlay" class="nav-overlay" role="dialog" aria-modal="true" aria-label="모바일 메뉴">
+    <div class="nav-overlay-inner">
+      <a href="#about" class="nav-overlay-link">회사소개</a>
+      <a href="organization.html" class="nav-overlay-link">조직도</a>
+      <a href="#services" class="nav-overlay-link">사업분야</a>
+      <a href="#contact" class="nav-overlay-link">연락처</a>
+    </div>
+  </div>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section id="hero" class="hero" aria-label="메인 비주얼">
+    <div class="hero-particles" id="particles" aria-hidden="true"></div>
+    <div class="hero-grid-overlay" aria-hidden="true"></div>
+    <div class="swiper hero-swiper" role="region" aria-roledescription="슬라이더" aria-label="메인 슬라이드 쇼">
+      <div class="swiper-wrapper">
+        <!-- Slide 1: AI Software -->
+        <div class="swiper-slide">
+          <div class="container hero-content-wrapper">
+            <div class="hero-content">
+              <span class="hero-tag"><i class="fa-solid fa-terminal"></i> AI &middot; Machine Learning &middot; Deep Learning</span>
+              <h1 class="hero-title">
+                <span class="hero-line">AI가 만드는</span>
+                <span class="hero-line hero-line-accent">새로운 가능성</span>
+              </h1>
+              <p class="hero-subtitle">AI 소프트웨어 개발로 비즈니스의 한계를 넘어서세요</p>
+              <a href="#services" class="btn btn-primary">사업분야 보기 <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="hero-terminal">
+              <div class="terminal-header">
+                <span class="terminal-dot terminal-red"></span>
+                <span class="terminal-dot terminal-yellow"></span>
+                <span class="terminal-dot terminal-green"></span>
+                <span class="terminal-title">forms@ai:~</span>
+              </div>
+              <div class="terminal-body">
+                <div class="terminal-line"><span class="terminal-prompt">$</span> <span class="terminal-cmd" data-typing="init">forms ai --init</span></div>
+                <div class="terminal-line"><span class="terminal-output">✓ AI engine loaded</span></div>
+                <div class="terminal-line"><span class="terminal-output">✓ Neural network ready [v3.2]</span></div>
+                <div class="terminal-line"><span class="terminal-output">✓ Model accuracy: 99.2%</span></div>
+                <div class="terminal-line"><span class="terminal-prompt">$</span> <span class="terminal-cursor">▊</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 2: HW Quality -->
+        <div class="swiper-slide">
+          <div class="container hero-content-wrapper">
+            <div class="hero-content">
+              <span class="hero-tag"><i class="fa-solid fa-microchip"></i> Hardware &middot; Diagnostics &middot; QA</span>
+              <h1 class="hero-title">
+                <span class="hero-line">정밀한 기술로</span>
+                <span class="hero-line hero-line-accent">높이는 품질</span>
+              </h1>
+              <p class="hero-subtitle">HW 수리 및 품질 검증, 신뢰할 수 있는 결과</p>
+              <a href="#services" class="btn btn-primary">사업분야 보기 <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="hero-terminal">
+              <div class="terminal-header">
+                <span class="terminal-dot terminal-red"></span>
+                <span class="terminal-dot terminal-yellow"></span>
+                <span class="terminal-dot terminal-green"></span>
+                <span class="terminal-title">forms@hw:~</span>
+              </div>
+              <div class="terminal-body">
+                <div class="terminal-line"><span class="terminal-prompt">$</span> <span class="terminal-cmd">forms hw --diagnose</span></div>
+                <div class="terminal-line"><span class="terminal-output">✓ Component scan complete</span></div>
+                <div class="terminal-line"><span class="terminal-output">✓ Stress test passed [24h]</span></div>
+                <div class="terminal-line"><span class="terminal-output">✓ Quality cert: ISO 9001</span></div>
+                <div class="terminal-line"><span class="terminal-prompt">$</span> <span class="terminal-cursor">▊</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 3: IoT Control -->
+        <div class="swiper-slide">
+          <div class="container hero-content-wrapper">
+            <div class="hero-content">
+              <span class="hero-tag"><i class="fa-solid fa-network-wired"></i> IoT &middot; Smart Factory &middot; AI Control</span>
+              <h1 class="hero-title">
+                <span class="hero-line">AI와 IoT의</span>
+                <span class="hero-line hero-line-accent">스마트한 연결</span>
+              </h1>
+              <p class="hero-subtitle">AI 기반 IoT 제어로 똑로운 세상을 구현합니다</p>
+              <a href="#services" class="btn btn-primary">사업분야 보기 <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="hero-terminal">
+              <div class="terminal-header">
+                <span class="terminal-dot terminal-red"></span>
+                <span class="terminal-dot terminal-yellow"></span>
+                <span class="terminal-dot terminal-green"></span>
+                <span class="terminal-title">forms@iot:~</span>
+              </div>
+              <div class="terminal-body">
+                <div class="terminal-line"><span class="terminal-prompt">$</span> <span class="terminal-cmd">forms iot --connect</span></div>
+                <div class="terminal-line"><span class="terminal-output">✓ 128 devices connected</span></div>
+                <div class="terminal-line"><span class="terminal-output">✓ Real-time sync: active</span></div>
+                <div class="terminal-line"><span class="terminal-output">✓ Edge AI: processing [live]</span></div>
+                <div class="terminal-line"><span class="terminal-prompt">$</span> <span class="terminal-cursor">▊</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <i class="fa-solid fa-arrow-down"></i>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT SECTION ==================== -->
+  <section id="about" class="about section" aria-label="회사 소개">
+    <div class="about-grid-bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">&lt;About /&gt;</span>
+        <h2 class="section-title">회사소개</h2>
+        <p class="section-desc">AI, HW, IoT — 기술의 삼위일체로 혁신을 주도합니다</p>
+      </div>
+      <div class="about-content">
+        <div class="about-text" data-aos="fade-right" data-aos-delay="100">
+          <h3>(주)폼즈는 기술로 가치를 만듭니다</h3>
+          <p>
+            (주)폼즈는 AI 소프트웨어 개발, HW 수리 및 품질 검증, AI 기반 IoT 제어를
+            주요 사업으로 하는 기술 기업입니다. 우리는 첨단 기술을 통해 고객의 비즈니스
+            가치를 극대화하고, 더 스마트한 미래를 만들어갑니다.
+          </p>
+          <p>
+            최고의 전문성과 기술력으로 신뢰받는 파트너가 되겠습니다.
+          </p>
+          <div class="about-tags">
+            <span class="tech-tag">AI/ML</span>
+            <span class="tech-tag">Deep Learning</span>
+            <span class="tech-tag">NLP</span>
+            <span class="tech-tag">Computer Vision</span>
+            <span class="tech-tag">IoT Edge</span>
+            <span class="tech-tag">Quality Assurance</span>
+          </div>
+        </div>
+        <div class="about-mission" data-aos="fade-left" data-aos-delay="200">
+          <div class="mission-card widget-card">
+            <i class="fa-solid fa-bullseye"></i>
+            <h4>Mission</h4>
+            <p>기술로 세상을 더 스마트하게</p>
+          </div>
+          <div class="mission-card widget-card">
+            <i class="fa-solid fa-eye"></i>
+            <h4>Vision</h4>
+            <p>AI와 IoT의 선두주자</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Departments -->
+      <div class="departments-grid" data-aos="fade-up" data-aos-delay="400">
+        <div class="department-card widget-card card-hover-lift--glow">
+          <i class="fa-solid fa-code"></i>
+          <h4>SW 개발팀</h4>
+          <p>AI/ML 알고리즘 개발, 딥러닝 모델 학습, NLP 및 Computer Vision 솔루션 구축. 맞춤형 AI 플랫폼 설계부터 배포까지 전 주기를 책임집니다.</p>
+        </div>
+        <div class="department-card widget-card card-hover-lift--glow">
+          <i class="fa-solid fa-screwdriver-wrench"></i>
+          <h4>하드웨어 수리팀</h4>
+          <p>태블릿, 산업용 장비, IoT 기기 등 하드웨어의 정밀 진단과 수리를 수행합니다. MRO 등급 부품으로 교체하고 순정 호환성을 검증합니다.</p>
+        </div>
+        <div class="department-card widget-card card-hover-lift--glow">
+          <i class="fa-solid fa-shield-halved"></i>
+          <h4>품질관리팀</h4>
+          <p>하드웨어 수리팀에서 수리한 제품의 출고 전 검증을 담당합니다. 기능·성능·내구성 3단계 QA 테스트를 진행하고, 모니터링 대시보드를 통해 전체 수리 이력을 실시간으로 관리합니다.</p>
+        </div>
+      </div>
+
+      <!-- Stats Dashboard -->
+      <div class="stats" data-aos="fade-up" data-aos-delay="300" role="region" aria-label="회사 실적">
+        <div class="stat-widget">
+          <span class="stat-widget-label">PROJECTS</span>
+          <span class="stat-number" data-target="50" aria-label="프로젝트 50개 이상 완료">0</span><span class="stat-suffix" aria-hidden="true">+</span>
+          <span class="stat-label">프로젝트 완료</span>
+        </div>
+        <div class="stat-widget">
+          <span class="stat-widget-label">CLIENTS</span>
+          <span class="stat-number" data-target="30" aria-label="고객사 30개 이상">0</span><span class="stat-suffix" aria-hidden="true">+</span>
+          <span class="stat-label">고객사</span>
+        </div>
+        <div class="stat-widget">
+          <span class="stat-widget-label">PATENTS</span>
+          <span class="stat-number" data-target="10" aria-label="기술 특허 10개 이상">0</span><span class="stat-suffix" aria-hidden="true">+</span>
+          <span class="stat-label">기술 특허</span>
+        </div>
+        <div class="stat-widget">
+          <span class="stat-widget-label">SATISFACTION</span>
+          <span class="stat-number" data-target="99" aria-label="고객 만족도 99%">0</span><span class="stat-suffix" aria-hidden="true">%</span>
+          <span class="stat-label">고객 만족도</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SERVICES SECTION ==================== -->
+  <section id="services" class="services section" aria-label="사업 분야">
+    <div class="services-grid-bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">&lt;Services /&gt;</span>
+        <h2 class="section-title">사업분야</h2>
+        <p class="section-desc">End-to-end 기술 솔루션으로 비즈니스를 혁신합니다</p>
+      </div>
+      <div class="services-grid">
+        <!-- Service 1: AI Software -->
+        <div class="service-card widget-card">
+          <div class="service-card-header">
+            <span class="service-tech-tag">01</span>
+            <span class="tech-tag tech-tag-cyan">AI / ML</span>
+          </div>
+          <div class="service-icon">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+          <h3>AI 소프트웨어 개발</h3>
+          <p>
+            머신러닝, 딥러닝, 자연어 처리 등 최첨단 AI 기술을 활용하여
+            고객사 맞춤형 소프트웨어를 개발합니다. 데이터 분석부터
+            AI 플랫폼 구축까지 원스톱 솔루션을 제공합니다.
+          </p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check"></i> 맞춤형 AI 알고리즘 개발</li>
+            <li><i class="fa-solid fa-check"></i> 데이터 분석 및 예측 모델</li>
+            <li><i class="fa-solid fa-check"></i> AI 플랫폼 구축 및 통합</li>
+          </ul>
+        </div>
+
+        <!-- Service 2: HW Quality -->
+        <a href="hw_repair.html" class="service-card-link">
+          <div class="service-card widget-card">
+            <div class="service-card-header">
+              <span class="service-tech-tag">02</span>
+              <span class="tech-tag tech-tag-warm">HW / QA</span>
+            </div>
+            <div class="service-icon">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+            <h3>HW 수리 및 품질 검증</h3>
+          <p>
+            정밀한 진단 기술과 검증된 공정으로 하드웨어의 수명과
+            성능을 극대화합니다. 신뢰성 테스트부터 품질 인증까지
+            전반적인 HW 라이프사이클을 관리합니다.
+          </p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check"></i> 정밀 HW 진단 및 수리</li>
+            <li><i class="fa-solid fa-check"></i> 품질 검증 및 신뢰성 테스트</li>
+            <li><i class="fa-solid fa-check"></i> 품질 인증 컨설팅</li>
+          </ul>
+          </div>
+        </a>
+
+        <!-- Service 3: AI IoT -->
+        <div class="service-card widget-card">
+          <div class="service-card-header">
+            <span class="service-tech-tag">03</span>
+            <span class="tech-tag tech-tag-purple">IoT / EDGE</span>
+          </div>
+          <div class="service-icon">
+            <i class="fa-solid fa-network-wired"></i>
+          </div>
+          <h3>AI 기반 IoT 제어</h3>
+          <p>
+            AI와 IoT의 결합으로 지능형 제어 시스템을 구현합니다.
+            스마트 팩토리, 스마트 홈, 산업용 모니터링 등
+            다양한 분야에서 혁신적인 솔루션을 제공합니다.
+          </p>
+          <ul class="service-features">
+            <li><i class="fa-solid fa-check"></i> 스마트 공장 솔루션</li>
+            <li><i class="fa-solid fa-check"></i> IoT 플랫폼 개발</li>
+            <li><i class="fa-solid fa-check"></i> 실시간 모니터링 및 제어</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT SECTION ==================== -->
+  <section id="contact" class="contact section" aria-label="연락처">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">&lt;Contact /&gt;</span>
+        <h2 class="section-title">연락처</h2>
+        <p class="section-desc">프로젝트 상담이나 기술 문의가 있으시면 언제든 연락해주세요</p>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info" data-aos="fade-right">
+          <h3>소통으로 함께 성장합니다</h3>
+          <p>궁금한 점이나 제안사항이 있으시면 언제든 연락해주세요.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <span class="contact-label">Email</span>
+                <span class="contact-value">cs@formskorea.com</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <span class="contact-label">Address</span>
+                <span class="contact-value">추후 등록</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrapper" data-aos="fade-left">
+          <form id="contact-form" class="contact-form" action="php/send_mail.php" method="POST">
+            <div class="form-group">
+              <label for="name">이름 <span class="required">*</span></label>
+              <input type="text" id="name" name="name" required placeholder="홍길동">
+              <span class="error-msg" id="name-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">이메일 <span class="required">*</span></label>
+              <input type="email" id="email" name="email" required placeholder="example@email.com">
+              <span class="error-msg" id="email-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="subject">제목 <span class="required">*</span></label>
+              <input type="text" id="subject" name="subject" required placeholder="문의할 제목을 입력하세요">
+              <span class="error-msg" id="subject-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="message">메시지 <span class="required">*</span></label>
+              <textarea id="message" name="message" rows="5" required placeholder="문의 내용을 상세히 적어주세요"></textarea>
+              <span class="error-msg" id="message-error"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+              <span class="btn-text">문의하기</span>
+              <span class="btn-loader" style="display:none;"><i class="fa-solid fa-spinner fa-spin"></i> 전송 중...</span>
+            </button>
+            <div class="form-status" id="form-status" role="alert" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-grid-bg" aria-hidden="true"></div>
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="logo-text">FORMS<span class="dot">.</span></span>
+          <p>(주)폼즈 — 기술로 가치를 만듭니다</p>
+        </div>
+        <div class="footer-nav">
+          <div class="footer-nav-col">
+            <h4>&lt;Services /&gt;</h4>
+            <a href="#services">AI 소프트웨어 개발</a>
+            <a href="hw_repair.html">HW 수리 및 검증</a>
+            <a href="#services">AI IoT 제어</a>
+          </div>
+          <div class="footer-nav-col">
+            <h4>&lt;Company /&gt;</h4>
+            <a href="#about">회사소개</a>
+            <a href="organization.html">조직도</a>
+            <a href="#contact">연락처</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          <p>&copy; <span id="current-year"></span> (주)폼즈. All rights reserved.</p>
+        </div>
+        <a href="#hero" class="btn-back-top"><i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <!-- AOS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>(주)폼즈 | HW 수리 및 품질 검증 — 정밀 하드웨어 진단부터 품질 인증까지</title>
+  <meta name="description" content="(주)폼즈의 HW 수리 및 품질 검증 서비스 — 태블릿 논배터리, 액정 교체, 충전 포트, 메인보드 수리 등 전문적인 하드웨어 수리 및 QA">
+
+  <!-- SUIT Font -->
+  <link rel="stylesheet" as="style" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css" />
+
+  <!-- JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Skip to content link (accessibility) -->
+  <a href="#hw-hero-content" class="skip-link">본문으로 이동</a>
+
+  <!-- ==================== HEADER / NAV ==================== -->
+  <header id="header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="FORMS 홈으로 이동">
+        <span class="logo-text">FORMS<span class="dot">.</span></span>
+      </a>
+      <nav id="nav" role="navigation" aria-label="주요 내비게이션">
+        <ul class="nav-list">
+          <li><a href="index.html#about">회사소개</a></li>
+          <li><a href="index.html#services">사업분야</a></li>
+          <li><a href="index.html#contact">연락처</a></li>
+        </ul>
+      </nav>
+      <button id="menu-toggle" class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="nav-overlay">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <div id="nav-overlay" class="nav-overlay" role="dialog" aria-modal="true" aria-label="모바일 메뉴">
+    <div class="nav-overlay-inner">
+      <a href="index.html#about" class="nav-overlay-link">회사소개</a>
+      <a href="index.html#services" class="nav-overlay-link">사업분야</a>
+      <a href="index.html#contact" class="nav-overlay-link">연락처</a>
+    </div>
+  </div>
+
+  <!-- ==================== SUB HERO ==================== -->
+  <section class="sub-hero" id="hw-hero-content">
+    <div class="hero-grid-overlay"></div>
+    <div class="container sub-hero-inner">
+      <span class="hero-tag"><i class="fa-solid fa-microchip"></i> Hardware &middot; Diagnostics &middot; Quality Assurance</span>
+      <h1 class="sub-hero-title" id="hw-hero-content">
+        정밀한 기술로<br>
+        <span class="hero-line-accent">높이는 품질</span>
+      </h1>
+      <p class="sub-hero-desc">
+        태블릿부터 산업용 장비까지 — 전문 진단, 정밀 수리, 신뢰성 검증.<br class="desktop-only">
+        (주)폼즈의 HW 수리 및 품질 검증 서비스로 제품의 성능을 극대화하세요.
+      </p>
+      <div class="sub-hero-ctas">
+        <a href="#hw-services" class="btn btn-primary">서비스 보기 <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="index.html#contact" class="btn btn-outline"><i class="fa-solid fa-envelope"></i> 상담 문의</a>
+      </div>
+
+      <!-- Mini terminal -->
+      <div class="sub-hero-terminal">
+        <div class="terminal-header">
+          <span class="terminal-dot terminal-red"></span>
+          <span class="terminal-dot terminal-yellow"></span>
+          <span class="terminal-dot terminal-green"></span>
+          <span class="terminal-title">forms@hw:~</span>
+        </div>
+        <div class="terminal-body">
+          <div class="terminal-line"><span class="terminal-prompt">$</span> <span class="terminal-cmd">forms hw --diagnose --all</span></div>
+          <div class="terminal-line"><span class="terminal-output">✓ Component scan complete</span></div>
+          <div class="terminal-line"><span class="terminal-output">✓ LCD panel test passed [Full HD]</span></div>
+          <div class="terminal-line"><span class="terminal-output">✓ Battery health: 97% [Optimal]</span></div>
+          <div class="terminal-line"><span class="terminal-output">✓ Charging port impedance: OK</span></div>
+          <div class="terminal-line"><span class="terminal-output">✓ Quality cert: ISO 9001 verified</span></div>
+          <div class="terminal-line"><span class="terminal-prompt">$</span> <span class="terminal-cursor">▊</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BREADCRUMB ==================== -->
+  <div class="breadcrumb-bar">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="페이지 경로">
+        <a href="index.html"><i class="fa-solid fa-house"></i> 홈</a>
+        <span class="breadcrumb-sep"><i class="fa-solid fa-chevron-right"></i></span>
+        <a href="index.html#services">사업분야</a>
+        <span class="breadcrumb-sep"><i class="fa-solid fa-chevron-right"></i></span>
+        <span class="breadcrumb-current">HW 수리 및 품질 검증</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ==================== SERVICE CATEGORIES (Bento Grid) ==================== -->
+  <section id="hw-services" class="hw-services section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">&lt;Service Categories /&gt;</span>
+        <h2 class="section-title">수리 서비스 분야</h2>
+        <p class="section-desc">모바일 기기부터 산업용 장비까지 — 전문 분야별 정밀 수리 솔루션</p>
+      </div>
+
+      <div class="bento-grid">
+        <!-- Tablet Repair (Large card) -->
+        <div class="bento-card bento-large" data-aos="fade-up" data-aos-delay="100">
+          <div class="bento-card-bg"></div>
+          <div class="bento-icon bento-warm">
+            <i class="fa-solid fa-tablet-screen-button"></i>
+          </div>
+          <span class="tech-tag tech-tag-warm">TABLET</span>
+          <h3>태블릿 전문 수리</h3>
+          <p>iPad, 갤럭시 탭 등 주요 태블릿 기기의 모든 수리 항목을 커버합니다. 원본 부품급 품질의 교체부품과 정밀 공정을 보장합니다.</p>
+          <ul class="bento-features">
+            <li><i class="fa-solid fa-check"></i> 액정 디스플레이 교체 (OLED/LCD)</li>
+            <li><i class="fa-solid fa-check"></i> 논배터리(메인보드) 수리</li>
+            <li><i class="fa-solid fa-check"></i> 배터리 용량 진단 및 교체</li>
+            <li><i class="fa-solid fa-check"></i> 터치 스크린 패널 수리</li>
+            <li><i class="fa-solid fa-check"></i> 후면 커버 분해/재조립</li>
+          </ul>
+        </div>
+
+        <!-- LCD Replacement -->
+        <div class="bento-card card-hover-lift--glow" data-aos="fade-up" data-aos-delay="150">
+          <div class="bento-icon bento-cyan">
+            <i class="fa-solid fa-display"></i>
+          </div>
+          <span class="tech-tag tech-tag-cyan">DISPLAY</span>
+          <h3>액정 교체 서비스</h3>
+          <p>깨진 액정, 터치 불량, 색감 이상 등 디스플레이 관련 모든 문제를 해결합니다.</p>
+          <ul class="bento-features">
+            <li><i class="fa-solid fa-check"></i> 오리지널급 패널 공급</li>
+            <li><i class="fa-solid fa-check"></i> 캘리브레이션 포함</li>
+            <li><i class="fa-solid fa-check"></i> 30분~2시간 급행 수리</li>
+          </ul>
+        </div>
+
+        <!-- Charging Port -->
+        <div class="bento-card card-hover-lift--glow" data-aos="fade-up" data-aos-delay="200">
+          <div class="bento-icon bento-cyan">
+            <i class="fa-solid fa-plug-circle-bolt"></i>
+          </div>
+          <span class="tech-tag tech-tag-cyan">CONNECT</span>
+          <h3>충전 포트 교체</h3>
+          <p>충전 불량, 연결 불안정, 포트 마모 등의 문제를 정밀 수리합니다.</p>
+          <ul class="bento-features">
+            <li><i class="fa-solid fa-check"></i> USB-C / Lightning / 마이크로서IAL</li>
+            <li><i class="fa-solid fa-check"></i> 단자 재납땜 &amp; 교체</li>
+            <li><i class="fa-solid fa-check"></i> 무선 충전 코일 수리</li>
+          </ul>
+        </div>
+
+        <!-- Motherboard -->
+        <div class="bento-card card-hover-lift--glow" data-aos="fade-up" data-aos-delay="250">
+          <div class="bento-icon bento-warm">
+            <i class="fa-solid fa-server"></i>
+          </div>
+          <span class="tech-tag tech-tag-warm">BOARD</span>
+          <h3>메인보드 수리</h3>
+          <p>소자 교체, 리플로우, 배선 복구 등 기판 수준의 정밀 수리를 수행합니다.</p>
+          <ul class="bento-features">
+            <li><i class="fa-solid fa-check"></i> IC 칩 레벨 수리</li>
+            <li><i class="fa-solid fa-check"></i> 리플로우 &amp; 리볼링</li>
+            <li><i class="fa-solid fa-check"></i> 배선 복구 (레이어 개조)</li>
+          </ul>
+        </div>
+
+        <!-- Battery -->
+        <div class="bento-card card-hover-lift--glow" data-aos="fade-up" data-aos-delay="300">
+          <div class="bento-icon bento-purple">
+            <i class="fa-solid fa-battery-three-quarters"></i>
+          </div>
+          <span class="tech-tag tech-tag-purple">POWER</span>
+          <h3>배터리 교체</h3>
+          <p>배터리 효율 저하, 과열, 부풀어오름 등 배터리 관련 문제를 해결합니다.</p>
+          <ul class="bento-features">
+            <li><i class="fa-solid fa-check"></i> 순정급 배터리 공급</li>
+            <li><i class="fa-solid fa-check"></i> 효율 진단 (SOH 측정)</li>
+            <li><i class="fa-solid fa-check"></i> kalibr레이션 완료</li>
+          </ul>
+        </div>
+
+        <!-- Camera -->
+        <div class="bento-card card-hover-lift--glow" data-aos="fade-up" data-aos-delay="100">
+          <div class="bento-icon bento-cyan">
+            <i class="fa-solid fa-camera"></i>
+          </div>
+          <span class="tech-tag tech-tag-cyan">CAMERA</span>
+          <h3>카메라 수리</h3>
+          <p>카메라 유리 파손, 포커싱 불량, 화질 저하를 전문 수리합니다.</p>
+          <ul class="bento-features">
+            <li><i class="fa-solid fa-check"></i> 카메라 모듈 교체</li>
+            <li><i class="fa-solid fa-check"></i> 유리 커버 재장착</li>
+            <li><i class="fa-solid fa-check"></i> OIS 진동복원</li>
+          </ul>
+        </div>
+
+        <!-- Water Damage (Large) -->
+        <div class="bento-card bento-large" data-aos="fade-up" data-aos-delay="150">
+          <div class="bento-card-bg"></div>
+          <div class="bento-icon bento-purple">
+            <i class="fa-solid fa-droplet"></i>
+          </div>
+          <span class="tech-tag tech-tag-purple">RECOVERY</span>
+          <h3>물손상 복구 전문</h3>
+          <p>물에 젖은 기기의 긴급 복구를 전문으로 합니다. 부식 제거, 세정, 부품 교체까지 전 공정을 관리합니다.</p>
+          <ul class="bento-features">
+            <li><i class="fa-solid fa-check"></i> 초음파 세정 &amp; 부식 제거</li>
+            <li><i class="fa-solid fa-check"></i> 기판 레벨 정밀 진단</li>
+            <li><i class="fa-solid fa-check"></i> 긴급 데이터 복구 대응</li>
+            <li><i class="fa-solid fa-check"></i> 방수 처리 재적용</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== HARDWARE MONITORING DASHBOARD ==================== -->
+  <section class="hw-dashboard section">
+    <div class="services-grid-bg"></div>
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">&lt;Repair Tracking Dashboard /&gt;</span>
+        <h2 class="section-title">실시간 수리 모니터링 대시보드</h2>
+        <p class="section-desc">(주)폼즈의 품질관리팀은 하드웨어 수리팀에서 완료한 모든 수리 건을 실시간으로 모니터링하고 관리합니다.<br>일별 수리 이력을 기록하고, 3단계 QA 테스트 진행 상황을 추적하여 고객과 투명하게 소통합니다.</p>
+      </div>
+
+      <!-- Dashboard Mock -->
+      <div class="dashboard-mock widget-card" data-aos="fade-up" data-aos-delay="100">
+        <!-- Dashboard Header -->
+        <div class="dashboard-header">
+          <div class="dashboard-logo">
+            <span class="logo-text">FORMS<span class="dot">.</span></span>
+            <span class="tech-tag tech-tag-cyan">QC Monitoring</span>
+          </div>
+          <div class="dashboard-user-bar">
+            <span><i class="fa-solid fa-building"></i> (주)샘플기업</span>
+            <span><i class="fa-regular fa-calendar"></i> 2026.04.28 화요일</span>
+            <span class="dashboard-status-dot"><i class="fa-solid fa-circle"></i> 실시간 연동 중</span>
+          </div>
+        </div>
+
+        <!-- Stats Row -->
+        <div class="dashboard-stats">
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon dash-stat-cyan"><i class="fa-solid fa-clipboard-list"></i></div>
+            <div>
+              <span class="dash-stat-value" id="stat-total">24</span>
+              <span class="dash-stat-label">총 접수 건수</span>
+            </div>
+          </div>
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon dash-stat-warm"><i class="fa-solid fa-spinner"></i></div>
+            <div>
+              <span class="dash-stat-value" id="stat-progress">7</span>
+              <span class="dash-stat-label">진행 중</span>
+            </div>
+          </div>
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon dash-stat-purple"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div>
+              <span class="dash-stat-value" id="stat-diagnosis">3</span>
+              <span class="dash-stat-label">진단 대기</span>
+            </div>
+          </div>
+          <div class="dash-stat-card">
+            <div class="dash-stat-icon dash-stat-success"><i class="fa-solid fa-circle-check"></i></div>
+            <div>
+              <span class="dash-stat-value" id="stat-completed">14</span>
+              <span class="dash-stat-label">수리 완료</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Dashboard Grid -->
+        <div class="dashboard-grid">
+          <!-- Repair Status Chart (Bar Chart Mock) -->
+          <div class="dash-chart-card">
+            <div class="dash-chart-header">
+              <h4><i class="fa-solid fa-chart-column"></i> 주간 수리 현황</h4>
+              <span class="tech-tag tech-tag-cyan" style="font-size: 0.65rem;">WEEKLY</span>
+            </div>
+            <div class="bar-chart">
+              <div class="chart-bars">
+                <div class="chart-bar-group">
+                  <div class="chart-bar bar-incoming" style="--bar-height: 40%;"></div>
+                  <span class="chart-label">월</span>
+                </div>
+                <div class="chart-bar-group">
+                  <div class="chart-bar bar-progress" style="--bar-height: 30%;"></div>
+                  <span class="chart-label">화</span>
+                </div>
+                <div class="chart-bar-group">
+                  <div class="chart-bar bar-incoming" style="--bar-height: 65%;"></div>
+                  <span class="chart-label">수</span>
+                </div>
+                <div class="chart-bar-group">
+                  <div class="chart-bar bar-progress" style="--bar-height: 20%;"></div>
+                  <span class="chart-label">목</span>
+                </div>
+                <div class="chart-bar-group">
+                  <div class="chart-bar bar-incoming" style="--bar-height: 50%;"></div>
+                  <span class="chart-label">금</span>
+                </div>
+              </div>
+              <div class="chart-legend">
+                <span><span class="legend-dot legend-cyan"></span> 신규 접수</span>
+                <span><span class="legend-dot legend-warm"></span> 진행 중</span>
+                <span><span class="legend-dot legend-success"></span> 완료</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Activity Feed -->
+          <div class="dash-feed-card">
+            <div class="dash-chart-header">
+              <h4><i class="fa-solid fa-clock-rotate-left"></i> 최근 활동</h4>
+              <span style="font-size: var(--caption-font-size); color: var(--accent-cyan); cursor: pointer;">전체 보기 <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+            <div class="activity-feed">
+              <div class="feed-item feed-completed">
+                <span class="feed-time">14:32</span>
+                <div class="feed-dot feed-dot-success"></div>
+                <div>
+                  <span class="feed-title">iPad Pro 12.9" 액정 교체</span>
+                  <span class="feed-status">QA 테스트 완료 → 출고 준비</span>
+                </div>
+              </div>
+              <div class="feed-item feed-progress">
+                <span class="feed-time">13:15</span>
+                <div class="feed-dot feed-dot-warm"></div>
+                <div>
+                  <span class="feed-title">갤럭시 탭 S9 배터리 교체</span>
+                  <span class="feed-status">수리 진행 중 — 65% 완료</span>
+                </div>
+              </div>
+              <div class="feed-item feed-incoming">
+                <span class="feed-time">11:40</span>
+                <div class="feed-dot feed-dot-cyan"></div>
+                <div>
+                  <span class="feed-title">산업용 태블릿 5대 일괄 진단</span>
+                  <span class="feed-status">접수 확인 → 진단 예약됨</span>
+                </div>
+              </div>
+              <div class="feed-item feed-completed">
+                <span class="feed-time">10:22</span>
+                <div class="feed-dot feed-dot-success"></div>
+                <div>
+                  <span class="feed-title">Surface Pro 8 충전 포트 교체</span>
+                  <span class="feed-status">기능 테스트 통과 → 고객 반납</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Daily Record Table -->
+        <div class="dash-table-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="dash-chart-header">
+            <h4><i class="fa-solid fa-table"></i> 일자별 수리 기록 — 고객과 공유</h4>
+            <span style="font-size: var(--caption-font-size); color: rgba(255,255,255,0.5);"><i class="fa-solid fa-share-nodes"></i> 자동 푸시 알림 연동</span>
+          </div>
+          <div class="dash-table-wrapper">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>접수 번호</th>
+                  <th>날짜</th>
+                  <th>기종</th>
+                  <th>수리 항목</th>
+                  <th>상태</th>
+                  <th>기술자</th>
+                  <th>예상 완료</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="dash-ticket">#HW-260428-01</td>
+                  <td>04/28</td>
+                  <td>iPad Pro 12.9"</td>
+                  <td>액정 교체 (OLED)</td>
+                  <td><span class="dash-status dash-completed">완료</span></td>
+                  <td>김OO</td>
+                  <td>04/28 14:30</td>
+                </tr>
+                <tr>
+                  <td class="dash-ticket">#HW-260428-02</td>
+                  <td>04/28</td>
+                  <td>갤럭시 탭 S9 FE</td>
+                  <td>배터리 교체</td>
+                  <td><span class="dash-status dash-progress">진행 중</span></td>
+                  <td>박OO</td>
+                  <td>04/28 16:00</td>
+                </tr>
+                <tr>
+                  <td class="dash-ticket">#HW-260427-03</td>
+                  <td>04/27</td>
+                  <td>Surface Pro 8</td>
+                  <td>충전 포트 교체</td>
+                  <td><span class="dash-status dash-completed">완료</span></td>
+                  <td>김OO</td>
+                  <td>04/27 15:45</td>
+                </tr>
+                <tr>
+                  <td class="dash-ticket">#HW-260428-04</td>
+                  <td>04/28</td>
+                  <td>산업용 태블릿 × 5</td>
+                  <td>대량 진단 + QA</td>
+                  <td><span class="dash-status dash-diagnosis">진단 대기</span></td>
+                  <td>이OO</td>
+                  <td>04/29 10:00</td>
+                </tr>
+             </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dashboard Value Props -->
+      <div class="dashboard-features" data-aos="fade-up" data-aos-delay="100">
+        <div class="dash-feature-item widget-card card-hover-lift--glow">
+          <i class="fa-solid fa-chart-line"></i>
+          <h4>실시간 상태 공유</h4>
+          <p>수리 진행 상황을 대시보드를 통해 실시간으로 확인 가능하며, 완료 시 자동 푸시 알림을 드립니다.</p>
+        </div>
+        <div class="dash-feature-item widget-card card-hover-lift--glow">
+          <i class="fa-solid fa-file-lines"></i>
+          <h4>일자별 기록 보관</h4>
+          <p>모든 수리 이력은 일자별로 자동 기록되어 조회가 가능하며, 필요 시 PDF 리포트로 제공받을 수 있습니다.</p>
+        </div>
+        <div class="dash-feature-item widget-card card-hover-lift--glow">
+          <i class="fa-solid fa-users-viewfinder"></i>
+          <h4>고객 소통 채널</h4>
+          <p>대시보드 내 직접 문의 기능으로 기술자와 실시간으로 소통하고, 수리 우선순위를 조정할 수 있습니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== REPAIR PROCESS ==================== -->
+  <section class="hw-process section">
+    <div class="services-grid-bg"></div>
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">&lt;Process /&gt;</span>
+        <h2 class="section-title">수리 진행 프로세스</h2>
+        <p class="section-desc" style="color: rgba(255,255,255,0.7);">투명한 수리 과정으로 신뢰를 드립니다</p>
+      </div>
+
+      <div class="process-timeline">
+        <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+          <div class="step-number widget-card"><span>01</span></div>
+          <div class="step-content">
+            <h3>진단 요청 접수</h3>
+            <p>온라인 또는 전화로 수리 상담을 진행합니다. 증상, 기종, 구매 시점을 확인하여 사전 진단을 실시합니다.</p>
+          </div>
+        </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+          <div class="step-number widget-card"><span>02</span></div>
+          <div class="step-content">
+            <h3>정밀 진단 &amp; 견적 제공</h3>
+            <p>전문 장비로 하드웨어 상태를 세분화하여 분석합니다. 정확한 원인과 수리 비용, 소요 시간을 안내드립니다.</p>
+          </div>
+        </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+          <div class="step-number widget-card"><span>03</span></div>
+          <div class="step-content">
+            <h3>수리 진행 &amp; 품질 검증</h3>
+            <p>승인 후 전문 기술자가 정밀 수리를 진행하며, 완료 시 3단계 QA 테스트 (기능/성능/내구성)를 통과해야 출고됩니다.</p>
+          </div>
+        </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+          <div class="step-number widget-card"><span>04</span></div>
+          <div class="step-content">
+            <h3>출고 &amp; AS 보장</h3>
+            <p>수리 완료 후 안전하게 발송하며, 동일 항목에 대해 90일 품질 보증을 제공합니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PRICING GUIDE ==================== -->
+  <section class="hw-pricing section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">&lt;Pricing Guide /&gt;</span>
+        <h2 class="section-title">참고 견적</h2>
+        <p class="section-desc">기기 모델, 수리 항목에 따라 실제 비용이 다를 수 있습니다. 정확한 견적은 진단 후 안내드립니다.</p>
+      </div>
+
+      <div class="pricing-table-wrapper" data-aos="fade-up" data-aos-delay="100">
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th scope="col">수리 항목</th>
+              <th scope="col">대기 시간</th>
+              <th scope="col">참고 견적 (₩)</th>
+              <th scope="col">보증 기간</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><i class="fa-solid fa-display"></i> 액정 교체</td>
+              <td>30분 ~ 2시간</td>
+              <td>₩89,000 ~ ₩249,000</td>
+              <td><span class="warranty-badge">90일</span></td>
+            </tr>
+            <tr>
+              <td><i class="fa-solid fa-plug-circle-bolt"></i> 충전 포트 교체</td>
+              <td>30분 ~ 1시간</td>
+              <td>₩39,000 ~ ₩79,000</td>
+              <td><span class="warranty-badge">90일</span></td>
+            </tr>
+            <tr>
+              <td><i class="fa-solid fa-battery-three-quarters"></i> 배터리 교체</td>
+              <td>30분 ~ 1시간</td>
+              <td>₩45,000 ~ ₩89,000</td>
+              <td><span class="warranty-badge">90일</span></td>
+            </tr>
+            <tr>
+              <td><i class="fa-solid fa-server"></i> 메인보드 수리</td>
+              <td>1~3일</td>
+              <td>₩79,000 ~ ₩299,000</td>
+              <td><span class="warranty-badge">90일</span></td>
+            </tr>
+            <tr>
+              <td><i class="fa-solid fa-camera"></i> 카메라 수리</td>
+              <td>1~2시간</td>
+              <td>₩49,000 ~ ₩129,000</td>
+              <td><span class="warranty-badge">90일</span></td>
+            </tr>
+            <tr>
+              <td><i class="fa-solid fa-droplet"></i> 물손상 복구</td>
+              <td>1~5일</td>
+              <td>₩69,000 ~ ₩349,000</td>
+              <td><span class="warranty-badge">60일</span></td>
+            </tr>
+            <tr>
+              <td><i class="fa-solid fa-magnifying-glass"></i> 정밀 진단 (수리 별도)</td>
+              <td>当日</td>
+              <td>₩15,000</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="pricing-note" data-aos="fade-up"><i class="fa-solid fa-circle-info"></i> 견적은 기종, 모델, 손상 정도에 따라 상이할 수 있습니다. 정확한 비용은 무료 진단 후 안내드립니다.</p>
+    </div>
+  </section>
+
+  <!-- ==================== WHY US (Quality Assurance) ==================== -->
+  <section class="hw-why section">
+    <div class="about-grid-bg"></div>
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">&lt;Why Us /&gt;</span>
+        <h2 class="section-title">왜 (주)폼즈인가요?</h2>
+        <p class="section-desc">단순 수리가 아닌 품질 보증까지 — 신뢰하는 이유 5가지</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card widget-card" data-aos="fade-up" data-aos-delay="100">
+          <span class="why-number">01</span>
+          <i class="fa-solid fa-microscope"></i>
+          <h4>정밀 진단 장비 보유</h4>
+          <p>산업용 현미경, 오실로스코프, 논 테스터 등 전문 장비로 미세한 결함까지 정확하게 분석합니다.</p>
+        </div>
+        <div class="why-card widget-card" data-aos="fade-up" data-aos-delay="150">
+          <span class="why-number">02</span>
+          <i class="fa-solid fa-shield-halved"></i>
+          <h4>3단계 QA 테스트</h4>
+          <p>기능 체크 → 성능 벤치마크 → 내구성 스트레스 테스트. 모든 수리 제품이 3단계를 통과해야 출고됩니다.</p>
+        </div>
+        <div class="why-card widget-card" data-aos="fade-up" data-aos-delay="200">
+          <span class="why-number">03</span>
+          <i class="fa-solid fa-certificate"></i>
+          <h4>원본 부품급 품질</h4>
+          <p>MRO(Manufacturer Remanufactured Original) 등급 부품을 사용하며, 순정 호환성을 철저히 검증합니다.</p>
+        </div>
+        <div class="why-card widget-card" data-aos="fade-up" data-aos-delay="250">
+          <span class="why-number">04</span>
+          <i class="fa-solid fa-clock"></i>
+          <h4>급행 수리 대응</h4>
+          <p>액정 교체, 충전 포트 등 주요 항목은 방문 시 30분~2시간 내에 완료하여 급한 사용도 가능합니다.</p>
+        </div>
+        <div class="why-card widget-card" data-aos="fade-up" data-aos-delay="300">
+          <span class="why-number">05</span>
+          <i class="fa-solid fa-hand-holding-heart"></i>
+          <h4>90일 품질 보증</h4>
+          <p>동일 항목에 대해 90일 무상 AS를 제공하며, 수리 내역서와 보증서를 함께 발급합니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA / CONTACT ==================== -->
+  <section class="hw-cta section">
+    <div class="services-grid-bg"></div>
+    <div class="container">
+      <div class="cta-box widget-card" data-aos="fade-up">
+        <div class="cta-content">
+          <span class="section-tag">&lt;Get Started /&gt;</span>
+          <h2>수리 상담이 필요하신가요?</h2>
+          <p>기종과 증상을 알려주시면 빠르게 견적을 안내드립니다. 무료 진단 후 수리 여부를 결정하실 수 있습니다.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="index.html#contact" class="btn btn-primary btn-lg">무료 상담 신청하기 <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="mailto:cs@formskorea.com" class="btn btn-outline btn-lg"><i class="fa-solid fa-envelope"></i> cs@formskorea.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-grid-bg" aria-hidden="true"></div>
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html"><span class="logo-text">FORMS<span class="dot">.</span></span></a>
+          <p>(주)폼즈 — 기술로 가치를 만듭니다</p>
+        </div>
+        <div class="footer-nav">
+          <div class="footer-nav-col">
+            <h4>&lt;Services /&gt;</h4>
+            <a href="index.html#services">AI 소프트웨어 개발</a>
+            <a href="hw_repair.html">HW 수리 및 검증</a>
+            <a href="index.html#services">AI IoT 제어</a>
+          </div>
+          <div class="footer-nav-col">
+            <h4>&lt;Company /&gt;</h4>
+            <a href="index.html#about">회사소개</a>
+            <a href="index.html#contact">연락처</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          <p>&copy; <span id="current-year"></span> (주)폼즈. All rights reserved.</p>
+        </div>
+        <a href="#hw-hero-content" class="btn-back-top"><i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
