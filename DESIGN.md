@@ -1,7 +1,7 @@
 ---
 name: FORMS Corporate
-version: beta
-description: (주)폼즈 — AI Software · HW Quality · IoT Control. Production-grade corporate identity for AI, hardware, and IoT technology company.
+version: 2.0
+description: (주)폼즈 — ODM 전문 기업. HW 설계·제작부터 AI SW 개발 및 A/S까지 제품의 전 주기를 책임지는 토탈 솔루션 기업.
 design_source: "Claude Code Frontend Aesthetics Cookbook (claude-cookbooks/coding/prompting_for_frontend_aesthetics)"
 role_tokens:
   Primary: "{colors.accent-cyan} (#00C9B1) — Main brand/action color for interactive elements"
@@ -171,7 +171,7 @@ components:
 
 ## Overview
 
-FORMS corporate identity presents a **modern IT engineering company** aesthetic. The design language blends technical precision with visual clarity: subtle grid backgrounds (circuit-board inspired), monospace typography for code-like labels and tags, dark-themed hero sections with data-visualization elements, and dashboard-style widget cards. The palette anchors in a deep navy base (trust, enterprise-grade) with electric cyan (AI/software innovation) and warm orange (hardware precision) as accent colors. JetBrains Mono adds a terminal/code aesthetic to labels, tags, and stats. The overall feel is professional, technical, and data-driven — an IT company that communicates expertise through structured, systematic design.
+FORMS corporate identity presents an **ODM technology company** aesthetic — from HW design/manufacturing to AI SW development and A/S support. The design language blends technical precision with visual clarity: subtle grid backgrounds (circuit-board inspired), monospace typography for code-like labels and tags, dark-themed hero sections with data-visualization elements, and dashboard-style widget cards. The palette anchors in a deep navy base (trust, enterprise-grade) with warm orange (HW manufacturing/precision engineering — primary accent), electric cyan (AI/software innovation), and purple (A/S connectivity/support). JetBrains Mono adds a terminal/code aesthetic to labels, tags, and stats. The overall feel is professional, technical, and end-to-end — an ODM company that owns the full product lifecycle from concept to field support.
 
 **Design Source:** [Claude Code Frontend Aesthetics Cookbook](https://github.com/anthropics/claude-cookbooks/blob/main/coding/prompting_for_frontend_aesthetics.ipynb) — production-grade, context-aware aesthetic guidelines for distinctive interfaces.
 

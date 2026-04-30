@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
   initFormValidation();
   initSmoothScroll();
   initParticles();
-  initDashboardAnimation();
 });
 
 /* ---------- AOS Init (Cookbook: cubic-bezier smooth curves) ---------- */
@@ -235,7 +234,6 @@ function initGSAPAnimations() {
 
   // Staggered card reveals (Cookbook: orchestrated sequences)
   staggerRevealOnScroll('.services-grid .service-card');
-  staggerRevealOnScroll('.mission-grid .mission-card');
 }
 
 /* ---------- Counter Animation ---------- */
@@ -501,108 +499,6 @@ function initParticles() {
   window.addEventListener('resize', resize);
 }
 
-/* ---------- Dashboard Scroll Animation (Cookbook: orchestrated) ---------- */
-
-/**
- * Animate a set of dashboard widgets from a config array.
- * @param {Array} animations - Config for each animation block
- * @param {Object} scope - { trigger, prefersReducedMotion }
- */
-function animateDashboardWidgets(animations, scope) {
-  var motion = scope.prefersReducedMotion;
-
-  animations.forEach(function (anim) {
-    var els = typeof anim.selector === 'function' ? anim.selector() : document.querySelectorAll(anim.selector);
-    if (!els.length) return;
-
-    // Skip complex animations for reduced-motion users
-    if (motion && anim.skipIfReduced) return;
-
-    var from = anim.from || {};
-    var to = Object.assign({}, anim.to || {}, {
-      duration: motion ? 0 : (anim.duration || 0.6),
-      stagger: motion ? 0 : (anim.stagger || 0.1),
-      ease: 'power2.out',
-      scrollTrigger: {
-        trigger: scope.trigger,
-        start: anim.start || 'top 70%',
-      },
-    });
-
-    gsap.fromTo(els, from, to);
-  });
-}
-
-function initDashboardAnimation() {
-  var dashboardEl = document.querySelector('.dashboard-mock');
-  if (!dashboardEl) return;
-
-  // Only run if GSAP and ScrollTrigger are loaded
-  if (typeof gsap === 'undefined' || !gsap.ScrollTrigger) return;
-
-  var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  // Animate stat counters with stagger (Cookbook: orchestrated sequences)
-  var statConfig = [
-    { id: 'stat-total', target: 24, duration: 1.5 },
-    { id: 'stat-progress', target: 7, duration: 1.2 },
-    { id: 'stat-diagnosis', target: 3, duration: 0.9 },
-    { id: 'stat-completed', target: 14, duration: 1.8 },
-  ];
-
-  statConfig.forEach(function (cfg, i) {
-    var el = document.getElementById(cfg.id);
-    if (!el) return;
-
-    var obj = { val: 0 };
-    el.textContent = '0';
-
-    gsap.to(obj, {
-      val: cfg.target,
-      duration: prefersReducedMotion ? 0 : cfg.duration,
-      delay: i * 0.15,
-      ease: 'power2.out',
-      scrollTrigger: {
-        trigger: dashboardEl,
-        start: 'top 75%',
-      },
-      onUpdate: function () {
-        el.textContent = Math.round(obj.val);
-      },
-    });
-  });
-
-  // Config-driven widget animations (single prefersReducedMotion guard)
-  animateDashboardWidgets([
-    {
-      selector: '.chart-bar',
-      from: { height: '0%' },
-      to: { height: function (i) { return getComputedStyle(document.querySelectorAll('.chart-bar')[i]).getPropertyValue('--bar-height'); } },
-      duration: 1,
-      stagger: 0.15,
-      start: 'top 70%',
-      skipIfReduced: true,
-    },
-    {
-      selector: '.feed-item',
-      from: { opacity: 0, x: -20 },
-      to: { opacity: 1, x: 0 },
-      duration: 0.6,
-      stagger: 0.1,
-      start: 'top 65%',
-      skipIfReduced: true,
-    },
-    {
-      selector: '.dash-table tbody tr',
-      from: { opacity: 0, y: 10 },
-      to: { opacity: 1, y: 0 },
-      duration: 0.5,
-      stagger: 0.08,
-      start: 'top 60%',
-      skipIfReduced: true,
-    },
-  ], { trigger: dashboardEl, prefersReducedMotion: prefersReducedMotion });
-}
 
 /* ---------- Footer Year ---------- */
 (function () {
@@ -612,51 +508,3 @@ function initDashboardAnimation() {
   }
 })();
 
-/* ---------- Org Accordion Interactivity ---------- */
-(function () {
-  var orgList = document.querySelector('.org-list');
-  if (!orgList) return;
-
-  // Toggle expand/collapse
-  function togglePanel(btn) {
-    var expanded = btn.getAttribute('aria-expanded') === 'true';
-    btn.setAttribute('aria-expanded', String(!expanded));
-  }
-
-  orgList.addEventListener('click', function (e) {
-    var btn = e.target.closest('.org-toggle');
-    if (!btn) return;
-    togglePanel(btn);
-  });
-
-  orgList.addEventListener('keydown', function (e) {
-    if (e.key !== 'Enter' && e.key !== ' ') return;
-    var btn = e.target.closest('.org-toggle');
-    if (!btn) return;
-    e.preventDefault();
-    togglePanel(btn);
-  });
-
-  // Expand/Collapse All buttons
-  var expandAllBtn = document.querySelector('.org-btn-expand-all');
-  var collapseAllBtn = document.querySelector('.org-btn-collapse-all');
-
-  if (expandAllBtn) {
-    expandAllBtn.addEventListener('click', function () {
-      var toggles = orgList.querySelectorAll('.org-toggle');
-      toggles.forEach(function (btn) {
-        btn.setAttribute('aria-expanded', 'true');
-      });
-    });
-  }
-
-  if (collapseAllBtn) {
-    collapseAllBtn.addEventListener('click', function () {
-      var toggles = orgList.querySelectorAll('.org-toggle');
-      toggles.forEach(function (btn) {
-        btn.setAttribute('aria-expanded', 'false');
-      });
-    });
-  }
-
- })();
