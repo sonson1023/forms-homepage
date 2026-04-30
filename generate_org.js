@@ -368,6 +368,7 @@ html += '      </div>\r\n';
 html += '      <div class="footer-bottom">\r\n';
 html += '        <div class="footer-copy">\r\n';
 html += '          <p>&copy; <span id="current-year"></span> (주)폼즈. All rights reserved.</p>\r\n';
+html += '          <p class="footer-biz-info">대표자: 이정진 &nbsp;|&nbsp; 사업자등록번호: 385-87-02123</p>\r\n';
 html += '        </div>\r\n';
 html += '        <a href="#org-content" class="btn-back-top"><i class="fa-solid fa-arrow-up"></i></a>\r\n';
 html += '      </div>\r\n';

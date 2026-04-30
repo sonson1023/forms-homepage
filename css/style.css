@@ -1506,6 +1506,12 @@ select:focus-visible,
   letter-spacing: 0.03em;
 }
 
+.footer-biz-info {
+  margin-top: var(--spacing-xs);
+  font-size: var(--caption-font-size);
+  color: rgba(255, 255, 255, 0.38);
+}
+
 .btn-back-top {
   width: 40px;
   height: 40px;
