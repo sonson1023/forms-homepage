@@ -245,6 +245,7 @@ function initCounterAnimation() {
 
   function animateCounter(el) {
     var target = parseInt(el.getAttribute('data-target'), 10);
+    if (isNaN(target)) return;
     var duration = 2000;
     var start = 0;
     var startTime = null;
