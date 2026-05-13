@@ -56,18 +56,40 @@
   --radius-full: 9999px;
 
   /* Transitions (UI UX Pro Max: 150-300ms range) */
-  --transition-fast: 0.15s ease;
-  --transition-base: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 
   /* Shadows (Cookbook: depth-focused multi-layered) */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.12);
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.12);
   --shadow-xl: 0 30px 80px rgba(0, 0, 0, 0.15);
-  --shadow-cyan-glow: 0 8px 32px rgba(0, 201, 177, 0.25);
-  --shadow-warm-glow: 0 8px 32px rgba(255, 107, 53, 0.25);
-  --shadow-purple-glow: 0 8px 32px rgba(108, 92, 231, 0.25);
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --shadow-cyan-glow: 0 0 20px rgba(0, 201, 177, 0.25);
+  --shadow-warm-glow: 0 0 20px rgba(255, 107, 53, 0.25);
+  --shadow-purple-glow: 0 0 20px rgba(108, 92, 231, 0.25);
+
+/* Utility: Glassmorphism */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-panel-dark {
+  background: rgba(10, 22, 40, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Utility: Magnetic Hover Effect */
+.magnetic {
+  transition: transform 0.2s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
 
   /* Typography (Cookbook: weight extremes 700-900 for headings) */
   --heading-xl-font-size: clamp(2.5rem, 6vw, 4.5rem);
