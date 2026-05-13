@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
   initFormValidation();
   initSmoothScroll();
   initParticles();
+  initOrgAccordion();
 });
 
 /* ---------- AOS Init (Cookbook: cubic-bezier smooth curves) ---------- */
@@ -508,4 +509,35 @@ function initParticles() {
     yearEl.textContent = new Date().getFullYear();
   }
 })();
+
+/* ---------- Org Accordion ---------- */
+function initOrgAccordion() {
+  var cards = document.querySelectorAll('.org-dept-card');
+  if (!cards.length) return;
+
+  function toggleCard(card) {
+    var expanded = card.getAttribute('aria-expanded') === 'true';
+    card.setAttribute('aria-expanded', String(!expanded));
+    card.classList.toggle('is-expanded', !expanded);
+  }
+
+  cards.forEach(function (card) {
+    var header = card.querySelector('.org-dept-header');
+    (header || card).addEventListener('click', function () { toggleCard(card); });
+    card.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleCard(card); }
+    });
+  });
+
+  var mql = window.matchMedia('(max-width: 768px)');
+  function applyMobile(e) {
+    var isMobile = e.matches;
+    cards.forEach(function (card) {
+      card.setAttribute('aria-expanded', String(isMobile));
+      card.classList.toggle('is-expanded', isMobile);
+    });
+  }
+  applyMobile(mql);
+  mql.addEventListener('change', applyMobile);
+}
 

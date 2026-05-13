@@ -1,4 +1,5 @@
 var fs = require('fs');
+var path = require('path');
 
 // ============================================================
 // DATA
@@ -147,93 +148,6 @@ function tagClass(accent) {
 // ============================================================
 // RENDER FUNCTIONS
 // ============================================================
-function renderHeader() {
-  return '<a href="#org-content" class="skip-link">본문으로 이동</a>\n\n' +
-    '  <header id="header" role="banner">\n' +
-    '    <div class="container header-inner">\n' +
-    '      <a href="index.html#hero" class="logo" aria-label="FORMS 홈으로 이동">\n' +
-    '        <span class="logo-text">FORMS<span class="dot">.</span></span>\n' +
-    '      </a>\n' +
-    '      <nav role="navigation" aria-label="주요 내비게이션">\n' +
-    '        <ul class="nav-list">\n' +
-    '          <li><a href="index.html#about">회사소개</a></li>\n' +
-    '          <li><a href="organization.html" aria-current="page">조직도</a></li>\n' +
-    '          <li><a href="index.html#services">사업분야</a></li>\n' +
-    '          <li><a href="index.html#contact">연락처</a></li>\n' +
-    '        </ul>\n' +
-    '      </nav>\n' +
-    '      <button id="menu-toggle" class="menu-toggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="nav-overlay">\n' +
-    '        <span></span><span></span><span></span>\n' +
-    '      </button>\n' +
-    '    </div>\n' +
-    '  </header>\n\n' +
-    '  <div id="nav-overlay" class="nav-overlay" role="dialog" aria-modal="true" aria-label="모바일 메뉴">\n' +
-    '    <div class="nav-overlay-inner">\n' +
-    '      <a href="index.html#about" class="nav-overlay-link">회사소개</a>\n' +
-    '      <a href="organization.html" class="nav-overlay-link">조직도</a>\n' +
-    '      <a href="index.html#services" class="nav-overlay-link">사업분야</a>\n' +
-    '      <a href="index.html#contact" class="nav-overlay-link">연락처</a>\n' +
-    '    </div>\n' +
-    '  </div>';
-}
-
-function renderHero(org) {
-  var divCount = org.divisions.length;
-  var tCount = teamCount(org);
-  return '  <section id="org-content" class="sub-hero" aria-label="조직도 소개">\n' +
-    '    <div class="hero-grid-overlay" aria-hidden="true"></div>\n' +
-    '    <div class="container sub-hero-inner org-hero-inner">\n' +
-    '      <div class="org-hero-copy">\n' +
-    '        <span class="hero-tag"><i class="fa-solid fa-sitemap" aria-hidden="true"></i> Organization &middot; Structure &middot; Teamwork</span>\n' +
-    '        <h1 class="sub-hero-title">\n' +
-    '          ' + divCount + '개 본부,<br>\n' +
-    '          <span class="hero-line-accent">' + tCount + '개 팀이 함께합니다</span>\n' +
-    '        </h1>\n' +
-    '        <p class="sub-hero-desc">\n' +
-    '          HW 설계부터 AI SW 개발, A/S까지 —<br class="desktop-only">\n' +
-    '          (주)폼즈의 전문 조직이 제품 전 주기를 책임집니다.\n' +
-    '        </p>\n' +
-    '        <div class="sub-hero-ctas">\n' +
-    '          <a href="#org-divisions" class="btn btn-primary">조직 구성 보기 <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>\n' +
-    '          <a href="index.html#contact" class="btn btn-outline"><i class="fa-solid fa-envelope" aria-hidden="true"></i> 채용 문의</a>\n' +
-    '        </div>\n' +
-    '      </div>\n\n' +
-    '      <div class="sub-hero-terminal" role="img" aria-label="조직 구조 미리보기">\n' +
-    '        <div class="terminal-header">\n' +
-    '          <span class="terminal-dot terminal-red"></span>\n' +
-    '          <span class="terminal-dot terminal-yellow"></span>\n' +
-    '          <span class="terminal-dot terminal-green"></span>\n' +
-    '          <span class="terminal-title">forms@org:~</span>\n' +
-    '        </div>\n' +
-    '        <div class="terminal-body">\n' +
-    '          <div class="terminal-line"><span class="terminal-prompt">$</span> <span class="terminal-cmd">forms org --tree</span></div>\n' +
-    '          <div class="terminal-line"><span class="terminal-output">✓ Loading organization chart...</span></div>\n' +
-    '          <div class="terminal-line"><span class="terminal-output">  [CTO] 기술본부 — SW개발팀, SW Q/A팀</span></div>\n' +
-    '          <div class="terminal-line"><span class="terminal-output">  [HW]  개발관리팀 — HW개발반, 수리분석반</span></div>\n' +
-    '          <div class="terminal-line"><span class="terminal-output">  [QA]  품질관리팀 — 검증, 공정개선</span></div>\n' +
-    '          <div class="terminal-line"><span class="terminal-output">  [COO] 경영지원본부 — 7 teams</span></div>\n' +
-    '          <div class="terminal-line"><span class="terminal-output">✓ ' + divCount + ' divisions · ' + tCount + ' teams · 20+ specialties</span></div>\n' +
-    '          <div class="terminal-line"><span class="terminal-prompt">$</span> <span class="terminal-cursor">▊</span></div>\n' +
-    '        </div>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
-    '  </section>';
-}
-
-function renderBreadcrumb() {
-  return '  <div class="breadcrumb-bar">\n' +
-    '    <div class="container">\n' +
-    '      <nav class="breadcrumb" aria-label="페이지 경로">\n' +
-    '        <a href="index.html"><i class="fa-solid fa-house" aria-hidden="true"></i> 홈</a>\n' +
-    '        <span class="breadcrumb-sep" aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></span>\n' +
-    '        <a href="index.html#about">회사소개</a>\n' +
-    '        <span class="breadcrumb-sep" aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></span>\n' +
-    '        <span class="breadcrumb-current">조직도</span>\n' +
-    '      </nav>\n' +
-    '    </div>\n' +
-    '  </div>';
-}
-
 function renderStats(org) {
   var divCount = org.divisions.length;
   var tCount = teamCount(org);
@@ -250,29 +164,29 @@ function renderStats(org) {
       '          <span class="stat-label">' + s.label + '</span>\n' +
       '        </div>';
   }).join('\n');
-  return '  <section class="org-stats-section" aria-label="조직 현황">\n' +
+  return '  <div class="org-stats-section">\n' +
     '    <div class="container">\n' +
     '      <div class="org-stats-grid">\n' + items + '\n' +
     '      </div>\n' +
     '    </div>\n' +
-    '  </section>';
+    '  </div>';
 }
 
 function renderCEO(ceo) {
-  return '  <section class="org-ceo-section" aria-label="대표이사">\n' +
+  return '  <div class="org-ceo-section">\n' +
     '    <div class="container">\n' +
     '      <div class="section-header" data-aos="fade-up">\n' +
     '        <span class="section-tag">&lt;Leadership /&gt;</span>\n' +
-    '        <h2 class="section-title" style="color:var(--white);">경영진</h2>\n' +
+    '        <h3 class="section-title" style="color:var(--white);">경영진</h3>\n' +
     '      </div>\n' +
     '      <div class="org-ceo-card" data-aos="fade-up" data-aos-delay="100">\n' +
     '        <div class="ceo-icon" aria-hidden="true"><i class="fa-solid fa-user-tie"></i></div>\n' +
     '        <p class="ceo-label">' + ceo.role + '</p>\n' +
-    '        <h3 class="ceo-title">' + ceo.title + '</h3>\n' +
+    '        <h4 class="ceo-title">' + ceo.title + '</h4>\n' +
     '        <p class="ceo-mission">' + ceo.mission + '</p>\n' +
     '      </div>\n' +
     '    </div>\n' +
-    '  </section>';
+    '  </div>';
 }
 
 function renderTeam(team, accent) {
@@ -290,9 +204,8 @@ function renderDivision(div, index) {
   var teamsHtml = div.teams.map(function(t) {
     return renderTeam(t, div.accent);
   }).join('\n');
-  var headLabel = div.head ? div.head + ' · ' + div.title : div.title;
   var headSpan = div.head ? '<span class="org-dept-head-label">' + div.head + '</span>' : '';
-  return '        <div class="org-dept-card org-dept-card--' + div.accent + '" \n' +
+  return '        <div class="org-dept-card org-dept-card--' + div.accent + '"\n' +
     '             role="button" tabindex="0"\n' +
     '             aria-expanded="false"\n' +
     '             aria-controls="dept-' + div.id + '-teams"\n' +
@@ -300,7 +213,7 @@ function renderDivision(div, index) {
     '          <div class="org-dept-header">\n' +
     '            <div class="org-dept-icon" aria-hidden="true"><i class="fa-solid ' + div.icon + '"></i></div>\n' +
     '            <div class="org-dept-meta">\n' +
-    headSpan +
+    headSpan + '\n' +
     '              <div class="org-dept-title">' + div.title + '</div>\n' +
     '              <div class="org-dept-subtitle" style="font-size:var(--caption-font-size);color:rgba(255,255,255,0.45);line-height:1.4;margin-top:2px;">' + div.subtitle + '</div>\n' +
     '              <span class="org-dept-badge"><i class="fa-solid fa-users" style="margin-right:3px;" aria-hidden="true"></i>' + div.teams.length + '팀</span>\n' +
@@ -319,125 +232,60 @@ function renderDivisions(org) {
   var cards = org.divisions.map(function(div, i) {
     return renderDivision(div, i);
   }).join('\n');
-  return '  <section id="org-divisions" class="org-divisions-section" aria-label="조직 구성">\n' +
+  return '  <div class="org-divisions-section">\n' +
     '    <div class="container">\n' +
     '      <div class="section-header" data-aos="fade-up">\n' +
     '        <span class="section-tag">&lt;Divisions /&gt;</span>\n' +
-    '        <h2 class="section-title">부서 구성</h2>\n' +
+    '        <h3 class="section-title">부서 구성</h3>\n' +
     '        <p class="section-desc">각 본부를 클릭하면 팀 구성을 확인할 수 있습니다</p>\n' +
     '      </div>\n' +
     '      <div class="org-divisions-grid">\n' + cards + '\n' +
     '      </div>\n' +
     '    </div>\n' +
-    '  </section>';
+    '  </div>';
 }
 
-function renderFooter() {
-  return '  <footer class="footer" role="contentinfo">\n' +
-    '    <div class="footer-grid-bg" aria-hidden="true"></div>\n' +
-    '    <div class="container footer-inner">\n' +
-    '      <div class="footer-top">\n' +
-    '        <div class="footer-brand">\n' +
-    '          <span class="logo-text">FORMS<span class="dot">.</span></span>\n' +
-    '          <p>(주)폼즈 — 기술로 가치를 만듭니다</p>\n' +
-    '        </div>\n' +
-    '        <div class="footer-nav">\n' +
-    '          <div class="footer-nav-col">\n' +
-    '            <h4>SERVICES</h4>\n' +
-    '            <a href="index.html#services">AI 소프트웨어 개발</a>\n' +
-    '            <a href="hw_repair.html">HW 수리 및 검증</a>\n' +
-    '            <a href="index.html#services">AI IoT 제어</a>\n' +
-    '          </div>\n' +
-    '          <div class="footer-nav-col">\n' +
-    '            <h4>COMPANY</h4>\n' +
-    '            <a href="index.html#about">회사소개</a>\n' +
-    '            <a href="organization.html">조직도</a>\n' +
-    '            <a href="index.html#contact">연락처</a>\n' +
-    '          </div>\n' +
-    '        </div>\n' +
-    '      </div>\n' +
-    '      <div class="footer-bottom">\n' +
-    '        <div class="footer-copy">\n' +
-    '          <p>&copy; <span id="current-year"></span> (주)폼즈. All rights reserved.</p>\n' +
-    '          <p class="footer-biz-info">대표자: 이정진 &nbsp;|&nbsp; 사업자등록번호: 385-87-02123</p>\n' +
-    '        </div>\n' +
-    '        <a href="#org-content" class="btn-back-top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>\n' +
+// ============================================================
+// SECTION BUILDER
+// ============================================================
+function renderOrgSection(org) {
+  var tCount = teamCount(org);
+  return '  <!-- ORG:START -->\n' +
+    '  <section id="organization" class="section" aria-label="조직 구성">\n' +
+    '    <div class="container">\n' +
+    '      <div class="section-header" data-aos="fade-up">\n' +
+    '        <span class="section-tag">&lt;Organization /&gt;</span>\n' +
+    '        <h2 class="section-title">조직도</h2>\n' +
+    '        <p class="section-desc">' + org.divisions.length + '개 본부 · ' + tCount + '개 팀 · 20+ 전문 분야</p>\n' +
     '      </div>\n' +
     '    </div>\n' +
-    '  </footer>';
-}
-
-function renderOrgScript() {
-  return '<script>\n' +
-    '(function() {\n' +
-    '  // Expand/collapse division cards\n' +
-    '  var cards = document.querySelectorAll(".org-dept-card");\n' +
-    '  function toggleCard(card) {\n' +
-    '    var expanded = card.getAttribute("aria-expanded") === "true";\n' +
-    '    card.setAttribute("aria-expanded", String(!expanded));\n' +
-    '    card.classList.toggle("is-expanded", !expanded);\n' +
-    '  }\n' +
-    '  cards.forEach(function(card) {\n' +
-    '    var header = card.querySelector(".org-dept-header");\n' +
-    '    (header || card).addEventListener("click", function() { toggleCard(card); });\n' +
-    '    card.addEventListener("keydown", function(e) {\n' +
-    '      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggleCard(card); }\n' +
-    '    });\n' +
-    '  });\n' +
-    '  var mql = window.matchMedia("(max-width: 768px)");\n' +
-    '  function applyMobile(e) {\n' +
-    '    var isMobile = e.matches;\n' +
-    '    cards.forEach(function(card) {\n' +
-    '      card.setAttribute("aria-expanded", String(isMobile));\n' +
-    '      card.classList.toggle("is-expanded", isMobile);\n' +
-    '    });\n' +
-    '  }\n' +
-    '  applyMobile(mql);\n' +
-    '  mql.addEventListener("change", applyMobile);\n' +
-    '})();\n' +
-    '<\/script>';
+    renderStats(org) + '\n' +
+    renderCEO(org.ceo) + '\n' +
+    renderDivisions(org) + '\n' +
+    '  </section>\n' +
+    '  <!-- ORG:END -->';
 }
 
 // ============================================================
-// PAGE BUILDER
+// PATCH index.html
 // ============================================================
-function buildPage(org) {
-  return '<!DOCTYPE html>\n' +
-    '<html lang="ko">\n' +
-    '<head>\n' +
-    '  <meta charset="UTF-8">\n' +
-    '  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n' +
-    '  <title>(주)폼즈 | 조직도</title>\n' +
-    '  <meta name="description" content="(주)폼즈 - 회사 전체 부서 및 조직 체계">\n' +
-    '  <link rel="stylesheet" as="style" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css" />\n' +
-    '  <link rel="preconnect" href="https://fonts.googleapis.com">\n' +
-    '  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n' +
-    '  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">\n' +
-    '  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />\n' +
-    '  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />\n' +
-    '  <link rel="stylesheet" href="css/style.css">\n' +
-    '</head>\n' +
-    '<body>\n' +
-    renderHeader() + '\n\n' +
-    renderHero(org) + '\n\n' +
-    renderBreadcrumb() + '\n\n' +
-    renderStats(org) + '\n\n' +
-    renderCEO(org.ceo) + '\n\n' +
-    renderDivisions(org) + '\n\n' +
-    renderFooter() + '\n\n' +
-    '  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"><\/script>\n' +
-    '  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"><\/script>\n' +
-    '  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"><\/script>\n' +
-    '  <script src="js/main.js"><\/script>\n' +
-    renderOrgScript() + '\n' +
-    '</body>\n' +
-    '</html>';
+var indexPath = path.join(__dirname, 'index.html');
+var html = fs.readFileSync(indexPath, 'utf8');
+
+var startMarker = '<!-- ORG:START -->';
+var endMarker = '<!-- ORG:END -->';
+var startIdx = html.indexOf(startMarker);
+var endIdx = html.indexOf(endMarker);
+
+if (startIdx === -1 || endIdx === -1) {
+  console.error('ERROR: ORG markers not found in index.html');
+  process.exit(1);
 }
 
-// ============================================================
-// WRITE
-// ============================================================
-var output = buildPage(ORG);
-fs.writeFileSync('D:/project/18_forms_homepage/organization.html', output, 'utf8');
-console.log('Done — organization.html written.');
+var before = html.slice(0, startIdx);
+var after = html.slice(endIdx + endMarker.length);
+var patched = before + renderOrgSection(ORG) + after;
+
+fs.writeFileSync(indexPath, patched, 'utf8');
+console.log('Done — index.html #organization section patched.');
 console.log('Divisions: ' + ORG.divisions.length + ', Teams: ' + teamCount(ORG));

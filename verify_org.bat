@@ -3,12 +3,12 @@ chcp 65001 >nul
 setlocal
 
 echo ============================================
-echo  Forms Homepage - Organization Page Verify
+echo  Forms Homepage - Organization Section Verify
 echo ============================================
 echo.
 
-:: Step 1: Regenerate organization.html
-echo [1/3] Generating organization.html...
+:: Step 1: Patch #organization section into index.html
+echo [1/3] Patching index.html #organization section...
 node generate_org.js
 if errorlevel 1 (
     echo ERROR: node generate_org.js failed.
@@ -17,75 +17,78 @@ if errorlevel 1 (
 )
 echo.
 
-:: Step 2: Basic file checks
-echo [2/3] Checking generated file...
-if not exist organization.html (
-    echo ERROR: organization.html not found.
+:: Step 2: Basic checks on patched index.html
+echo [2/3] Checking index.html for org section...
+if not exist index.html (
+    echo ERROR: index.html not found.
     pause
     exit /b 1
 )
 
-:: Check key sections are present
-findstr /c:"sub-hero" organization.html >nul
-if errorlevel 1 ( echo WARN: sub-hero section not found ) else ( echo OK   sub-hero section )
+findstr /c:"ORG:START" index.html >nul
+if errorlevel 1 ( echo WARN: ORG:START marker not found ) else ( echo OK   ORG:START marker )
 
-findstr /c:"breadcrumb-bar" organization.html >nul
-if errorlevel 1 ( echo WARN: breadcrumb-bar not found ) else ( echo OK   breadcrumb-bar )
+findstr /c:"id=""organization""" index.html >nul
+if errorlevel 1 ( echo WARN: #organization section not found ) else ( echo OK   #organization section )
 
-findstr /c:"org-stats-section" organization.html >nul
+findstr /c:"org-stats-section" index.html >nul
 if errorlevel 1 ( echo WARN: org-stats-section not found ) else ( echo OK   org-stats-section )
 
-findstr /c:"org-ceo-card" organization.html >nul
+findstr /c:"org-ceo-card" index.html >nul
 if errorlevel 1 ( echo WARN: org-ceo-card not found ) else ( echo OK   org-ceo-card )
 
-findstr /c:"org-divisions-grid" organization.html >nul
+findstr /c:"org-divisions-grid" index.html >nul
 if errorlevel 1 ( echo WARN: org-divisions-grid not found ) else ( echo OK   org-divisions-grid )
 
-findstr /c:"org-dept-card--cyan" organization.html >nul
+findstr /c:"org-dept-card--cyan" index.html >nul
 if errorlevel 1 ( echo WARN: cyan division not found ) else ( echo OK   cyan division )
 
-findstr /c:"org-dept-card--warm" organization.html >nul
+findstr /c:"org-dept-card--warm" index.html >nul
 if errorlevel 1 ( echo WARN: warm division not found ) else ( echo OK   warm division )
 
-findstr /c:"org-dept-card--purple" organization.html >nul
+findstr /c:"org-dept-card--purple" index.html >nul
 if errorlevel 1 ( echo WARN: purple division not found ) else ( echo OK   purple division )
 
-findstr /c:"aria-expanded" organization.html >nul
-if errorlevel 1 ( echo WARN: aria-expanded not found ) else ( echo OK   aria-expanded attributes )
+findstr /c:"href=""#organization""" index.html >nul
+if errorlevel 1 ( echo WARN: #organization nav link not found ) else ( echo OK   nav link #organization )
 
-findstr /c:"data-aos" organization.html >nul
-if errorlevel 1 ( echo WARN: AOS animations not found ) else ( echo OK   AOS data-aos attributes )
+findstr /c:"data-aos" index.html >nul
+if errorlevel 1 ( echo WARN: AOS attributes not found ) else ( echo OK   AOS data-aos attributes )
 
-findstr /c:"aos@2.3.4" organization.html >nul
-if errorlevel 1 ( echo WARN: AOS library not linked ) else ( echo OK   AOS library linked )
+findstr /c:"tech-tag" index.html >nul
+if errorlevel 1 ( echo WARN: tech-tag chips not found ) else ( echo OK   tech-tag chips )
 
-findstr /c:"tech-tag" organization.html >nul
-if errorlevel 1 ( echo WARN: tech-tags not found ) else ( echo OK   tech-tag chips )
+if exist organization.html (
+    echo WARN: organization.html still exists - should be deleted
+) else (
+    echo OK   organization.html deleted
+)
 
 echo.
 
-:: Step 3: Start PHP server
-echo [3/3] Starting PHP server at http://localhost:8080
+:: Step 3: Start Node server
+echo [3/3] Starting server at http://localhost:8080
 echo.
-echo  Open in browser: http://localhost:8080/organization.html
+echo  Open in browser: http://localhost:8080
 echo.
 echo  Checklist to verify in browser:
-echo    [ ] sub-hero + terminal visible
-echo    [ ] breadcrumb: Home > About > Org
-echo    [ ] 4 stat widgets displayed
-echo    [ ] CEO card with cyan glow
-echo    [ ] 4 division cards (cyan/warm/warm/purple)
-echo    [ ] Click division -> teams expand
-echo    [ ] Hover lift + accent glow on cards
-echo    [ ] tech-tag chips inside teams
-echo    [ ] AOS fade-up on scroll
-echo    [ ] No console errors (F12)
-echo    [ ] Mobile: resize to 768px -> all expand
+echo    [ ] Nav: 조직도 클릭 -> 같은 페이지 내 부드러운 스크롤
+echo    [ ] #organization 섹션이 회사소개와 프로세스 사이에 위치
+echo    [ ] 4 stat widgets 표시 (4본부 / 13팀 / 20+ / Total)
+echo    [ ] CEO 카드 cyan glow
+echo    [ ] 4 division 카드 (cyan/warm/warm/purple)
+echo    [ ] 본부 헤더 클릭 -> 팀 목록 펼침 (내부 클릭으로 닫히지 않음)
+echo    [ ] hover lift + accent glow
+echo    [ ] tech-tag 칩 표시
+echo    [ ] AOS fade-up 스크롤 애니메이션
+echo    [ ] 콘솔 에러 0 (F12)
+echo    [ ] 모바일 768px 이하 -> 자동 펼침
+echo    [ ] organization.html 직접 접근 -> 404
 echo.
 echo  Press Ctrl+C to stop the server.
 echo ============================================
 echo.
 
-php -S localhost:8080
+npx serve . -l 8080
 
 endlocal
