@@ -10,7 +10,7 @@
 header('Content-Type: application/json');
 
 // ---------- Configuration ----------
-$recipient = 'cs@formskorea.com';  // Change this to your actual email
+$recipient = 'sales@formskorea.com';  // Change this to your actual email
 $senderName = '(주)폼즈 홈페이지';
 $senderEmail = 'noreply@formskorea.com'; // Change to your domain email if available
 $emailSubject = '[폼즈 홈페이지 문의] ';

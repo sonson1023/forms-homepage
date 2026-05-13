@@ -89,4 +89,4 @@ node generate_org.js
 
 ## PHP Mail
 
-`php/send_mail.php` — 문의 폼 POST 수신 후 `mail()` 함수로 발송. JSON 응답 반환. 수신 주소: `cs@formskorea.com`. 프로덕션 배포 시 Apache + PHP 환경 필요.
+`php/send_mail.php` — 문의 폼 POST 수신 후 `mail()` 함수로 발송. JSON 응답 반환. 수신 주소: `sales@formskorea.com`. 프로덕션 배포 시 Apache + PHP 환경 필요.
