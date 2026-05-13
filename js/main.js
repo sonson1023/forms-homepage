@@ -91,6 +91,7 @@ function initMobileMenu() {
 
 /* ---------- Hero Swiper ---------- */
 function initHeroSwiper() {
+  if (!document.querySelector('.hero-swiper') || typeof Swiper === 'undefined') return;
   var heroSwiper = new Swiper('.hero-swiper', {
     loop: true,
     speed: 1000,
