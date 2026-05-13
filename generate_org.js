@@ -62,7 +62,7 @@ html += '      </div>\r\n';
 // Legend
 html += '\r\n      <div class="org-legend reveal-fade-up">\r\n';
 html += '        <span class="legend-item"><span class="legend-dot dept-sw"></span>SW개발팀</span>\r\n';
-html += '        <span class="legend-item"><span class="legend-dot dept-hw"></span>HW팀</span>\r\n';
+html += '        <span class="legend-item"><span class="legend-dot dept-hw"></span>HW개발관리팀</span>\r\n';
 html += '        <span class="legend-item"><span class="legend-dot dept-qa"></span>SW Q/A 팀</span>\r\n';
 html += '        <span class="legend-item"><span class="legend-dot dept-sales"></span>영업팀</span>\r\n';
 html += '        <span class="legend-item"><span class="legend-dot dept-mkt"></span>마케팅팀</span>\r\n';
@@ -153,20 +153,20 @@ html += '                </div>\r\n';
 html += '\n              </div>\r\n';
 html += '            </div>\r\n';
 
-// HW팀 (2단계 — CEO 바로 아래)
+// HW개발관리팀 (2단계 — CEO 바로 아래)
 html += '\n            <div class="org-branch reveal-fade-up">\r\n';
 html += '              <button type="button" class="org-toggle org-exec-level" aria-expanded="true" tabindex="0">\r\n';
 html += '                <span class="org-toggle-indicator"><i class="fa-solid fa-chevron-down"></i></span>\r\n';
 html += '                <span class="org-toggle-icon icon-hw-director"><i class="fa-solid fa-screwdriver-wrench"></i></span>\r\n';
 html += '                <span class="org-toggle-text">\r\n';
-html += '                  <span class="org-toggle-title">HW팀</span>\r\n';
-html += '                  <span class="org-toggle-subtitle">하드웨어 정밀 진단, 수리 및 분석</span>\r\n';
+html += '                  <span class="org-toggle-title">HW개발관리팀</span>\r\n';
+html += '                  <span class="org-toggle-subtitle">하드웨어 설계·제작 관리 및 정밀 수리·분석</span>\r\n';
 html += '                </span>\r\n';
 html += '              </button>\r\n';
 html += '              <div class="org-panel">\r\n';
 html += '                <div class="org-team-list">\r\n';
-html += '                  <div class="org-team-card"><i class="fa-solid fa-wrench"></i><div><strong>HW수리반</strong><span>모바일 기기, 태블릿 및 산업 장비 수리</span></div></div>\r\n';
-html += '                  <div class="org-team-card"><i class="fa-solid fa-magnifying-glass-chart"></i><div><strong>HW분석반</strong><span>하드웨어 성능 분석 및 고장 원인 규명</span></div></div>\r\n';
+html += '                  <div class="org-team-card"><i class="fa-solid fa-wrench"></i><div><strong>HW개발반</strong><span>스키매틱 설계, PCB 레이아웃 및 ODM 관리</span></div></div>\r\n';
+html += '                  <div class="org-team-card"><i class="fa-solid fa-magnifying-glass-chart"></i><div><strong>HW수리분석반</strong><span>기기 수리, 고장 원인 규명 및 성능 분석</span></div></div>\r\n';
 html += '                </div>\r\n';
 html += '              </div>\r\n';
 html += '            </div>\r\n';
