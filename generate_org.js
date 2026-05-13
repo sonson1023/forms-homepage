@@ -166,7 +166,7 @@ function renderStats(org) {
   }).join('\n');
   return '  <div class="org-stats-section">\n' +
     '    <div class="container">\n' +
-    '      <div class="section-header" data-aos="fade-up">\n' +
+    '      <div class="section-header">\n' +
     '        <span class="section-tag">&lt;Organization /&gt;</span>\n' +
     '        <h2 class="section-title">조직도</h2>\n' +
     '        <p class="section-desc">' + divCount + '개 본부 · ' + tCount + '개 팀 · 20+ 전문 분야</p>\n' +
@@ -180,7 +180,7 @@ function renderStats(org) {
 function renderCEO(ceo) {
   return '  <div class="org-ceo-section">\n' +
     '    <div class="container">\n' +
-    '      <div class="section-header" data-aos="fade-up">\n' +
+    '      <div class="section-header">\n' +
     '        <span class="section-tag">&lt;Leadership /&gt;</span>\n' +
     '        <h3 class="section-title">경영진</h3>\n' +
     '      </div>\n' +
@@ -239,7 +239,7 @@ function renderDivisions(org) {
   }).join('\n');
   return '  <div class="org-divisions-section">\n' +
     '    <div class="container">\n' +
-    '      <div class="section-header" data-aos="fade-up">\n' +
+    '      <div class="section-header">\n' +
     '        <span class="section-tag">&lt;Divisions /&gt;</span>\n' +
     '        <h3 class="section-title">부서 구성</h3>\n' +
     '        <p class="section-desc">각 본부를 클릭하면 팀 구성을 확인할 수 있습니다</p>\n' +
