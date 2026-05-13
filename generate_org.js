@@ -155,7 +155,7 @@ function renderStats(org) {
     { value: divCount, unit: '개', label: '전문 본부', icon: 'fa-building', delay: '0' },
     { value: tCount, unit: '개', label: '운영 팀', icon: 'fa-users', delay: '100' },
     { value: '20', unit: '+', label: '전문 분야', icon: 'fa-star', delay: '200' },
-    { value: 'Total', unit: '', label: '솔루션 기업', icon: 'fa-trophy', delay: '300' }
+    { value: '100', unit: '%', label: '전 주기 책임', icon: 'fa-trophy', delay: '300' }
   ];
   var items = stats.map(function(s) {
     return '        <div class="stat-widget" data-aos="fade-up" data-aos-delay="' + s.delay + '">\n' +
@@ -166,6 +166,11 @@ function renderStats(org) {
   }).join('\n');
   return '  <div class="org-stats-section">\n' +
     '    <div class="container">\n' +
+    '      <div class="section-header" data-aos="fade-up">\n' +
+    '        <span class="section-tag">&lt;Organization /&gt;</span>\n' +
+    '        <h2 class="section-title">조직도</h2>\n' +
+    '        <p class="section-desc">' + divCount + '개 본부 · ' + tCount + '개 팀 · 20+ 전문 분야</p>\n' +
+    '      </div>\n' +
     '      <div class="org-stats-grid">\n' + items + '\n' +
     '      </div>\n' +
     '    </div>\n' +
@@ -177,7 +182,7 @@ function renderCEO(ceo) {
     '    <div class="container">\n' +
     '      <div class="section-header" data-aos="fade-up">\n' +
     '        <span class="section-tag">&lt;Leadership /&gt;</span>\n' +
-    '        <h3 class="section-title" style="color:var(--white);">경영진</h3>\n' +
+    '        <h3 class="section-title">경영진</h3>\n' +
     '      </div>\n' +
     '      <div class="org-ceo-card" data-aos="fade-up" data-aos-delay="100">\n' +
     '        <div class="ceo-icon" aria-hidden="true"><i class="fa-solid fa-user-tie"></i></div>\n' +
@@ -249,16 +254,8 @@ function renderDivisions(org) {
 // SECTION BUILDER
 // ============================================================
 function renderOrgSection(org) {
-  var tCount = teamCount(org);
   return '  <!-- ORG:START -->\n' +
-    '  <section id="organization" class="section" aria-label="조직 구성">\n' +
-    '    <div class="container">\n' +
-    '      <div class="section-header" data-aos="fade-up">\n' +
-    '        <span class="section-tag">&lt;Organization /&gt;</span>\n' +
-    '        <h2 class="section-title">조직도</h2>\n' +
-    '        <p class="section-desc">' + org.divisions.length + '개 본부 · ' + tCount + '개 팀 · 20+ 전문 분야</p>\n' +
-    '      </div>\n' +
-    '    </div>\n' +
+    '  <section id="organization" aria-label="조직 구성">\n' +
     renderStats(org) + '\n' +
     renderCEO(org.ceo) + '\n' +
     renderDivisions(org) + '\n' +

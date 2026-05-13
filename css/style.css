@@ -2594,7 +2594,7 @@ a.contact-value:hover {
 /* Stats section */
 .org-stats-section {
   background: var(--white);
-  padding: var(--spacing-3xl) 0;
+  padding: var(--spacing-3xl) 0 var(--spacing-xxl);
   border-bottom: 1px solid var(--neutral-100);
 }
 
@@ -2714,6 +2714,7 @@ a.contact-value:hover {
   pointer-events: none;
 }
 
+.org-ceo-section .section-title,
 .org-divisions-section .section-title { color: var(--white); }
 .org-divisions-section .section-desc  { color: rgba(255, 255, 255, 0.65); }
 
