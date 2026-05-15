@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HW 설계 및 제작 — (주)폼즈</title>
+  <meta name="description" content="스키매틱 설계, PCB 레이아웃, 프로토타입 제작부터 양산 관리까지 — (주)폼즈의 HW 설계 및 제작 서비스">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230A1628'/><text x='16' y='22' font-size='18' font-weight='900' text-anchor='middle' fill='%232563EB'>F</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="메인 내비게이션">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="홈으로 이동">
+        <span class="logo-accent">F</span>ORMS
+      </a>
+      <div class="nav-links">
+        <a href="index.html#about">회사소개</a>
+        <a href="index.html#services">사업분야</a>
+        <a href="index.html#contact">연락처</a>
+        <a href="b2b_powerbank.html" class="nav-cta btn btn-primary">
+          B2B 보조배터리
+          <span class="icon-arrow">→</span>
+        </a>
+      </div>
+      <button class="nav-toggle" aria-label="메뉴 열기" type="button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Subpage Header -->
+  <section class="subpage-header">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="현재 위치">
+        <a href="index.html">홈</a>
+        <span class="separator">›</span>
+        <a href="index.html#services">사업분야</a>
+        <span class="separator">›</span>
+        <span class="current">HW 설계 및 제작</span>
+      </nav>
+      <div class="hero-content" style="padding: 60px 0 80px;">
+        <div class="hero-tag">HW / DESIGN · ODM</div>
+        <h1 class="hero-headline">
+          아이디어부터 제품까지,<br>
+          <span class="highlight-blue">완벽하게 구현합니다</span>
+        </h1>
+        <p class="hero-sub">
+          스키매틱 설계, PCB 레이아웃, 프로토타입 제작부터 양산 관리까지 — (주)폼즈의 HW 설계 및 제작 서비스
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HW Design Services (Bento Grid) -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">HW Design</div>
+        <h2 class="section-title">HW 설계 서비스</h2>
+        <p class="section-subtitle">전문 엔지니어가 처음부터 끝까지 책임지는 HW 토탈 솔루션</p>
+      </div>
+
+      <div class="repair-bento">
+        <div class="bento-card featured reveal">
+          <h4><span class="bento-icon">⚡</span> 스키매틱 및 PCB 설계</h4>
+          <p>KiCad, Altium 등 전문 EDA 툴을 활용한 스키매틱 캡처 및 PCB 레이아웃. 전원 회로 설계, 신호 무결성 분석, 2~16레이어, HDI/BGA/MI 라우팅, DRC/LVS 검증, Gerber/ODB++ 출력까지 전 과정을 수행합니다.</p>
+          <br>
+          <p>고속 신호 설계, 임피던스 매칭, 열 시뮬레이션을 포함한 전기적 검증으로 신뢰성 높은 기판을 보장합니다.</p>
+        </div>
+        <div class="bento-card reveal reveal-delay-1">
+          <h4><span class="bento-icon">🔧</span> 프로토타입 제작</h4>
+          <p>샘플 기판 제작(3~5일), 핸드 솔더링, 동작 검증 및 디버깅 — 빠른 프로토타이핑으로 설계를 검증합니다.</p>
+        </div>
+        <div class="bento-card reveal reveal-delay-2">
+          <h4><span class="bento-icon">📐</span> 인클로저 설계</h4>
+          <p>Fusion 360 / SolidWorks 기반 3D 모델링, 3D 프린팅 시제품, 금형 설계 및 제작까지 지원합니다.</p>
+        </div>
+        <div class="bento-card reveal reveal-delay-3">
+          <h4><span class="bento-icon">📦</span> 부품 선정 및 BOM 최적화</h4>
+          <p>MCU/SoC 플랫폼 선정, 수급 리스크 분석, Cost-down 설계로 최적의 BOM을 구성합니다.</p>
+        </div>
+        <div class="bento-card reveal reveal-delay-1">
+          <h4><span class="bento-icon">✅</span> 규격 인증 지원</h4>
+          <p>KC / FCC / CE 인증, EMC/EMI 사전 테스트, RoHS/REACH 준수 — 인증 대행을 지원합니다.</p>
+        </div>
+        <div class="bento-card reveal reveal-delay-2">
+          <h4><span class="bento-icon">🏭</span> 양산 관리</h4>
+          <p>입고 검사(IQC)부터 출고 전 최종 검증까지 체계적인 품질 관리로 안정적인 양산을 보장합니다.</p>
+        </div>
+        <div class="bento-card reveal reveal-delay-4">
+          <h4><span class="bento-icon">🔋</span> B2B 보조배터리 ODM</h4>
+          <p>로고 각인부터 IoT 연동 관리 시스템까지 — 맞춤형 보조배터리 ODM 솔루션을 제공합니다.</p>
+          <div style="margin-top: var(--space-md);">
+            <a href="b2b_powerbank.html" class="btn btn-ghost" style="padding-left:0;">
+              자세히 보기 <span class="icon-arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Repair Process -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-label">Repair Process</div>
+        <h2 class="section-title">수리 진행 프로세스</h2>
+        <p class="section-subtitle">체계적인 4단계 프로세스로 정확하고 빠르게</p>
+      </div>
+
+      <div class="repair-process">
+        <div class="repair-process-item reveal">
+          <div class="step-num">01</div>
+          <h4>진단 요청 접수</h4>
+          <p>온라인/전화 상담, 증상·기종 확인, 사전 진단</p>
+        </div>
+        <div class="repair-process-item reveal reveal-delay-1">
+          <div class="step-num">02</div>
+          <h4>정밀 진단 &amp; 견적</h4>
+          <p>전문 장비 분석, 정확한 원인과 비용·소요 시간 안내</p>
+        </div>
+        <div class="repair-process-item reveal reveal-delay-2">
+          <div class="step-num">03</div>
+          <h4>수리 &amp; 품질 검증</h4>
+          <p>3단계 QA 테스트(기능/성능/내구성) 통과 필수</p>
+        </div>
+        <div class="repair-process-item reveal reveal-delay-3">
+          <div class="step-num">04</div>
+          <h4>출고 &amp; AS 보장</h4>
+          <p>동일 항목 90일 품질 보증</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Price Reference -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-label">Price</div>
+        <h2 class="section-title">참고 견적</h2>
+        <p class="section-subtitle">수리 항목별 견적 범위와 소요 시간을 안내해 드립니다</p>
+      </div>
+
+      <div class="repair-prices" style="background: var(--bg-surface); border-radius: var(--radius-lg); border: 1px solid var(--neutral-200); overflow: hidden;">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">수리 항목</th>
+              <th scope="col">대기 시간</th>
+              <th scope="col">견적 범위</th>
+              <th scope="col">보증</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="font-weight: 600; color: var(--primary-900);">액정 교체</td>
+              <td>30분~2시간</td>
+              <td>₩89,000~₩249,000</td>
+              <td>90일</td>
+            </tr>
+            <tr>
+              <td style="font-weight: 600; color: var(--primary-900);">충전 포트 교체</td>
+              <td>30분~1시간</td>
+              <td>₩39,000~₩79,000</td>
+              <td>90일</td>
+            </tr>
+            <tr>
+              <td style="font-weight: 600; color: var(--primary-900);">배터리 교체</td>
+              <td>30분~1시간</td>
+              <td>₩45,000~₩89,000</td>
+              <td>90일</td>
+            </tr>
+            <tr>
+              <td style="font-weight: 600; color: var(--primary-900);">메인보드 수리</td>
+              <td>1~3일</td>
+              <td>₩79,000~₩299,000</td>
+              <td>90일</td>
+            </tr>
+            <tr>
+              <td style="font-weight: 600; color: var(--primary-900);">카메라 수리</td>
+              <td>1~2시간</td>
+              <td>₩49,000~₩129,000</td>
+              <td>90일</td>
+            </tr>
+            <tr>
+              <td style="font-weight: 600; color: var(--primary-900);">물손상 복구</td>
+              <td>1~5일</td>
+              <td>₩69,000~₩349,000</td>
+              <td>60일</td>
+            </tr>
+            <tr>
+              <td style="font-weight: 600; color: var(--primary-900);">정밀 진단 (수리 별도)</td>
+              <td>당일</td>
+              <td>₩15,000</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-label">Why Us</div>
+        <h2 class="section-title">폼즈가 선택되어야 하는 이유</h2>
+        <p class="section-subtitle">5가지 차별화된 강점이 만드는 신뢰</p>
+      </div>
+
+      <div class="why-us-grid">
+        <div class="why-us-item reveal">
+          <div class="why-us-number">01</div>
+          <h4>정밀 진단 장비 보유</h4>
+          <p>산업용 현미경, 오실로스코프, 논 테스터</p>
+        </div>
+        <div class="why-us-item reveal reveal-delay-1">
+          <div class="why-us-number">02</div>
+          <h4>3단계 QA 테스트</h4>
+          <p>기능 체크 → 성능 벤치마크 → 내구성 스트레스 테스트</p>
+        </div>
+        <div class="why-us-item reveal reveal-delay-2">
+          <div class="why-us-number">03</div>
+          <h4>원본 부품급 품질</h4>
+          <p>MRO 등급 부품 사용, 순정 호환성 검증</p>
+        </div>
+        <div class="why-us-item reveal reveal-delay-3">
+          <div class="why-us-number">04</div>
+          <h4>급행 수리 대응</h4>
+          <p>주요 항목 30분~2시간 내 완료</p>
+        </div>
+        <div class="why-us-item reveal reveal-delay-4">
+          <div class="why-us-number">05</div>
+          <h4>90일 품질 보증</h4>
+          <p>동일 항목 무상 AS, 수리 내역서·보증서 발급</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <span class="logo-accent">F</span>ORMS
+          </a>
+          <p>HW 설계·제작부터 AI SW·A/S까지 — (주)폼즈 하나로 전 과정이 완결되는 ODM 전문 기업입니다.</p>
+        </div>
+        <div>
+          <h4>사업분야</h4>
+          <div class="footer-links">
+            <a href="hw_repair.html">HW 설계 및 제작</a>
+            <a href="b2b_powerbank.html">B2B 보조배터리</a>
+            <a href="index.html#services">AI 소프트웨어 개발</a>
+            <a href="hw_repair.html">A/S 및 기술 지원</a>
+          </div>
+        </div>
+        <div>
+          <h4>회사</h4>
+          <div class="footer-links">
+            <a href="index.html#about">회사소개</a>
+            <a href="index.html#organization">조직도</a>
+            <a href="index.html#contact">연락처</a>
+          </div>
+        </div>
+        <div>
+          <h4>연락처</h4>
+          <div class="footer-links">
+            <a href="tel:07046174550">070-4617-4550</a>
+            <a href="mailto:sales@formskorea.com">sales@formskorea.com</a>
+            <a href="index.html#contact">문의하기</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© (주)폼즈. All rights reserved.</p>
+        <span class="footer-meta">대표자: 이정진 | 사업자등록번호: 385-87-02123</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
